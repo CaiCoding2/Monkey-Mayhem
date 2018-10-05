@@ -5,31 +5,31 @@ public class Controller2D : RaycastController {
 	
 	float maxClimbAngle = 80;
 	float maxDescendAngle = 80;
-    Animator anim;
+	private SpriteRenderer rend;
 	public CollisionInfo collisions;
 
-    public SpriteRenderer rend;
+
 	public override void Start() {
-        rend = GetComponent<SpriteRenderer>();
 		base.Start ();
 		collisions.faceDir = 1;
+		rend = GetComponent<SpriteRenderer>();
 	}
 
 	public void Move(Vector3 velocity, bool standingOnPlatform = false) {
 		UpdateRaycastOrigins ();
 		collisions.Reset ();
 		collisions.velocityOld = velocity;
-       
+
 		if (velocity.x != 0) {
 			collisions.faceDir = (int)Mathf.Sign(velocity.x);
-            if(collisions.faceDir == 1)
-            {
-                rend.flipX = true;
-            }else if(collisions.faceDir == -1)
-            {
-                rend.flipX = false;
-            }
-            
+			if (collisions.faceDir > 0)
+			{
+				rend.flipX = true;
+			}
+			else if (collisions.faceDir < 0)
+			{
+				rend.flipX = false;
+			}
 		}
 
 		if (velocity.y < 0) {
