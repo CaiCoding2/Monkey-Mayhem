@@ -4,7 +4,6 @@ using System.Collections;
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
 
-    Animator anim;
 	public float jumpHeight = 4;
 	public float timeToJumpApex = .4f;
 	float accelerationTimeAirborne = .2f;
@@ -24,10 +23,13 @@ public class Player : MonoBehaviour {
 	Vector3 velocity;
 	float velocityXSmoothing;
 
+	
+	
 	Controller2D controller;
 
+	public Animator animator;
+	
 	void Start() {
-
 		controller = GetComponent<Controller2D> ();
 
 		gravity = -(2 * jumpHeight) / Mathf.Pow (timeToJumpApex, 2);
@@ -36,16 +38,25 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update() {
+		
+		bool wallSliding = false;
+		animator.SetBool("SpaceBar", Input.GetKeyDown (KeyCode.Space));
+		
+		animator.SetFloat("Going Up", velocity.y);
+		animator.SetBool("Touching Ground", controller.collisions.below);	
 		Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 		int wallDirX = (controller.collisions.left) ? -1 : 1;
 
 		float targetVelocityX = input.x * moveSpeed;
 		velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
 
-		bool wallSliding = false;
+		animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
+		animator.SetFloat("Going Up", velocity.y);
+		
+		animator.SetBool("Sliding", wallSliding);
 		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0) {
 			wallSliding = true;
-
+			animator.SetBool("Sliding", wallSliding);
 			if (velocity.y < -wallSlideSpeedMax) {
 				velocity.y = -wallSlideSpeedMax;
 			}
@@ -72,9 +83,9 @@ public class Player : MonoBehaviour {
 		}
 
 
-        //Jumping
+
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			if (wallSliding) {
+			if (wallSliding) {	
 				if (wallDirX == input.x) {
 					velocity.x = -wallDirX * wallJumpClimb.x;
 					velocity.y = wallJumpClimb.y;
