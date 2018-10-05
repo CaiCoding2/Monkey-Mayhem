@@ -1,16 +1,24 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Controller2D : RaycastController {
 	
 	float maxClimbAngle = 80;
 	float maxDescendAngle = 80;
-    Animator anim;
+	
 	public CollisionInfo collisions;
 
-    public SpriteRenderer rend;
-	public override void Start() {
-        rend = GetComponent<SpriteRenderer>();
+    //not sebastian
+    private SpriteRenderer spriteRenderer;
+    public Animator animator;
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    //not sebastian
+
+    public override void Start() {
 		base.Start ();
 		collisions.faceDir = 1;
 	}
@@ -19,18 +27,25 @@ public class Controller2D : RaycastController {
 		UpdateRaycastOrigins ();
 		collisions.Reset ();
 		collisions.velocityOld = velocity;
-       
+
+        //not sebastian
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+        //not sebastian
+
 		if (velocity.x != 0) {
 			collisions.faceDir = (int)Mathf.Sign(velocity.x);
-            if(collisions.faceDir == 1)
+
+            //not sebastian
+            if (collisions.faceDir > 0)
             {
-                rend.flipX = true;
-            }else if(collisions.faceDir == -1)
-            {
-                rend.flipX = false;
+                spriteRenderer.flipX = true;
             }
-            
-		}
+            else if (collisions.faceDir < 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            //not sebastian
+        }
 
 		if (velocity.y < 0) {
 			DescendSlope(ref velocity);
