@@ -24,6 +24,8 @@ public class Player : MonoBehaviour {
 	Vector3 velocity;
 	float velocityXSmoothing;
 
+    float camSize;
+
 	Controller2D controller;
 
 	void Start() {
@@ -33,10 +35,25 @@ public class Player : MonoBehaviour {
 		gravity = -(2 * jumpHeight) / Mathf.Pow (timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 		print ("Gravity: " + gravity + "  Jump Velocity: " + jumpVelocity);
-	}
 
-	void Update() {
-		Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+        camSize = Camera.main.aspect * Camera.main.orthographicSize;
+
+
+    }
+
+    void Update() {
+        //player 
+        if (transform.position.x < -camSize)
+        {
+            // need to check if there object in new position
+            transform.position = new Vector2(camSize, transform.position.y);
+        }
+        if (transform.position.x > camSize)
+        {
+            transform.position = new Vector2(-camSize, transform.position.y);
+        }
+
+        Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
 		int wallDirX = (controller.collisions.left) ? -1 : 1;
 
 		float targetVelocityX = input.x * moveSpeed;
