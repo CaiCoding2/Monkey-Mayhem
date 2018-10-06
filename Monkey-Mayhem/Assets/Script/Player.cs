@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
 
 [RequireComponent (typeof (Controller2D))]
@@ -32,13 +33,13 @@ public class Player : MonoBehaviour {
 	Controller2D controller;
 
 	public Animator animator;
+
 	
 	void Start() {
 		controller = GetComponent<Controller2D> ();
 
 		gravity = -(2 * jumpHeight) / Mathf.Pow (timeToJumpApex, 2);
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-		print ("Gravity: " + gravity + "  Jump Velocity: " + jumpVelocity);
 
         camSize = Camera.main.aspect * Camera.main.orthographicSize;
 
@@ -48,6 +49,9 @@ public class Player : MonoBehaviour {
 
     void Update() {
         //player 
+	    
+	    
+	    
         if (transform.position.x < -camSize)
         {
             // need to check if there object in new position
@@ -145,6 +149,14 @@ public class Player : MonoBehaviour {
 		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
 		{
 			AudioManager.instance.PlaySound("Slide", transform.position, 6);
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Banana"))
+		{
+			ScoreTextScript.bananaAmount++;
 		}
 	}
 }

@@ -8,10 +8,12 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="Controller2D.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
+          <e p="ItemGrab.cs" t="Include" />
           <e p="MusicManager.cs" t="Include" />
           <e p="PlatformController.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="RaycastController.cs" t="Include" />
+          <e p="ScoreTextScript.cs" t="Include" />
           <e p="SoundLibrary.cs" t="Include" />
           <e p="Spawn.cs" t="Include" />
         </e>
