@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
@@ -24,6 +25,10 @@ public class Player : MonoBehaviour {
 	float velocityXSmoothing;
 
     float camSize;
+	
+	public AudioClip jump;
+	public AudioClip slide;
+	
 
 
 	Controller2D controller;
@@ -39,6 +44,8 @@ public class Player : MonoBehaviour {
 
         camSize = Camera.main.aspect * Camera.main.orthographicSize;
 
+		InvokeRepeating("runningSound", 0.00f, 0.3f);
+		InvokeRepeating("slidingSound", 0.0f, 1f);
     }
 
     void Update() {
@@ -99,29 +106,48 @@ public class Player : MonoBehaviour {
 			velocity.y = 0;
 		}
 
-
-		if (Input.GetKeyDown (KeyCode.Space)) {
+	    if (Input.GetKeyDown (KeyCode.Space)) {
 			if (wallSliding) {	
 				if (wallDirX == input.x) {
 					velocity.x = -wallDirX * wallJumpClimb.x;
 					velocity.y = wallJumpClimb.y;
+					AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				}
 				else if (input.x == 0) {
 					velocity.x = -wallDirX * wallJumpOff.x;
 					velocity.y = wallJumpOff.y;
+					AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				}
 				else {
 					velocity.x = -wallDirX * wallLeap.x;
 					velocity.y = wallLeap.y;
+					AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				}
 			}
 			if (controller.collisions.below) {
+				AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				velocity.y = jumpVelocity;
 			}
 		}
-
-	
+	    
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move (velocity * Time.deltaTime);
 	}
+
+	void runningSound()
+	{
+		if (controller.collisions.below && (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f || Mathf.Abs(velocity.x) > 0.4))
+		{
+			AudioManager.instance.PlaySound("Footstep", transform.position, 200f);
+		}
+	}
+	
+	void slidingSound()
+	{
+		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
+		{
+			AudioManager.instance.PlaySound("Slide", transform.position, 2);
+		}
+	}
 }
+
