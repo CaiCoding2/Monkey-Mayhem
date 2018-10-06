@@ -23,13 +23,9 @@ public class Player : MonoBehaviour {
 	Vector3 velocity;
 	float velocityXSmoothing;
 
-<<<<<<< HEAD
     float camSize;
 
-=======
-	
-	
->>>>>>> eff0c3a52cbc82b9b618b4db3ba9429d8d19dd23
+
 	Controller2D controller;
 
 	public Animator animator;
@@ -41,9 +37,7 @@ public class Player : MonoBehaviour {
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 		print ("Gravity: " + gravity + "  Jump Velocity: " + jumpVelocity);
 
-<<<<<<< HEAD
         camSize = Camera.main.aspect * Camera.main.orthographicSize;
-
 
     }
 
@@ -60,25 +54,23 @@ public class Player : MonoBehaviour {
         }
 
         Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
-=======
-	void Update() {
-		
-		bool wallSliding = false;
+        int wallDirX = (controller.collisions.left) ? -1 : 1;
+
+        
 		animator.SetBool("SpaceBar", Input.GetKeyDown (KeyCode.Space));
 		
 		animator.SetFloat("Going Up", velocity.y);
-		animator.SetBool("Touching Ground", controller.collisions.below);	
-		Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
->>>>>>> eff0c3a52cbc82b9b618b4db3ba9429d8d19dd23
-		int wallDirX = (controller.collisions.left) ? -1 : 1;
+		animator.SetBool("Touching Ground", controller.collisions.below);
 
-		float targetVelocityX = input.x * moveSpeed;
+        
+
+        float targetVelocityX = input.x * moveSpeed;
 		velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
 
 		animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
 		animator.SetFloat("Going Up", velocity.y);
-		
-		animator.SetBool("Sliding", wallSliding);
+        bool wallSliding = false;
+        animator.SetBool("Sliding", wallSliding);
 		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0) {
 			wallSliding = true;
 			animator.SetBool("Sliding", wallSliding);
@@ -106,7 +98,6 @@ public class Player : MonoBehaviour {
 		if (controller.collisions.above || controller.collisions.below) {
 			velocity.y = 0;
 		}
-
 
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
