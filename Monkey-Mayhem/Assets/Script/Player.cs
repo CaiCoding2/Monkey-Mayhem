@@ -44,7 +44,7 @@ public class Player : MonoBehaviour {
         camSize = Camera.main.aspect * Camera.main.orthographicSize;
 
 		InvokeRepeating("runningSound", 0.00f, 0.3f);
-		InvokeRepeating("slidingSound", 0.0f, 1f);
+		InvokeRepeating("slidingSound", 0.0f, 0.2f);
     }
 
     void Update() {
@@ -148,7 +148,7 @@ public class Player : MonoBehaviour {
 	{
 		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
 		{
-			AudioManager.instance.PlaySound("Slide", transform.position, 6);
+			//AudioManager.instance.PlaySound("Slide", transform.position, 6);
 		}
 	}
 

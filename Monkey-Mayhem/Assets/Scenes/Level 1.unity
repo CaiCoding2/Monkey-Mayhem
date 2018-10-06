@@ -338,7 +338,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: c91e52590bd17f34fb64e8ffaf9834bd, type: 3}
   - groupID: Slide
     group:
-    - {fileID: 8300000, guid: 564e56f6c7789c2499f46aca14fbc902, type: 3}
+    - {fileID: 8300000, guid: e165337ab6ec84be9aee39da5c95d14b, type: 3}
   - groupID: Footstep
     group:
     - {fileID: 8300000, guid: 61cd6008237147e43ad508ab4a9d00b2, type: 3}
@@ -2288,7 +2288,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1030658946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.32, y: 5.79, z: -1.2189237}
+  m_LocalPosition: {x: 7.25, y: 5.8, z: -1.2189237}
   m_LocalScale: {x: 0.47742, y: 0.47742, z: 0.47742}
   m_Children: []
   m_Father: {fileID: 233565255}
