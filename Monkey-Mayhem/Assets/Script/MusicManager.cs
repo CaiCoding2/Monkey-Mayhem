@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
 
-    public AudioClip mainTheme;
+    public AudioClip level1Theme;
     public AudioClip menuTheme;
 
     string sceneName;
@@ -30,13 +30,13 @@ public class MusicManager : MonoBehaviour
     {
         AudioClip clipToPlay = null;
 
-        if (sceneName == "Main")
+        if (sceneName == "Menu")
         {
-            clipToPlay = mainTheme;
+            clipToPlay = menuTheme;
         }
-        else if (sceneName == "Game")
+        else if (sceneName == "Level 1")
         {
-            clipToPlay = mainTheme;
+            clipToPlay = level1Theme;
         }
 
         if (clipToPlay != null)

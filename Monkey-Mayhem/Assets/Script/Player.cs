@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	public Vector2 wallJumpOff;
 	public Vector2 wallLeap;
 
-	public float wallSlideSpeedMax = 3;
+	public float wallSlideSpeedMax = 2;
 	public float wallStickTime = .25f;
 	float timeToWallUnstick;
 
@@ -28,8 +28,6 @@ public class Player : MonoBehaviour {
 	
 	public AudioClip jump;
 	public AudioClip slide;
-	
-
 
 	Controller2D controller;
 
@@ -109,8 +107,8 @@ public class Player : MonoBehaviour {
 	    if (Input.GetKeyDown (KeyCode.Space)) {
 			if (wallSliding) {	
 				if (wallDirX == input.x) {
-					velocity.x = -wallDirX * wallJumpClimb.x;
-					velocity.y = wallJumpClimb.y;
+					velocity.x = -wallDirX * wallJumpClimb.x * 1.5f;
+					velocity.y = wallJumpClimb.y * 1.2f;
 					AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				}
 				else if (input.x == 0) {
@@ -146,7 +144,7 @@ public class Player : MonoBehaviour {
 	{
 		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0)
 		{
-			AudioManager.instance.PlaySound("Slide", transform.position, 2);
+			AudioManager.instance.PlaySound("Slide", transform.position, 6);
 		}
 	}
 }
