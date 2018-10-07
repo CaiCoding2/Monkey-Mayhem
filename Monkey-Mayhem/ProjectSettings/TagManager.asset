@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Banana
   - Enemy
+  - Score
   layers:
   - Default
   - TransparentFX

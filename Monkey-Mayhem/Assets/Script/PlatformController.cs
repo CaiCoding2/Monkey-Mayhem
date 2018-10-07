@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformController : RaycastController {
 
 	public LayerMask passengerMask;
+    SpriteRenderer rend;
 
 	public Vector3[] localWaypoints;
 	Vector3[] globalWaypoints;
@@ -19,17 +20,23 @@ public class PlatformController : RaycastController {
 	float percentBetweenWaypoints;
 	float nextMoveTime;
 
-	List<PassengerMovement> passengerMovement;
-	Dictionary<Transform,Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
-	
-	public override void Start () {
+	//List<PassengerMovement> passengerMovement;
+	//Dictionary<Transform,Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
+
+    private void Awake()
+    {
+        rend = GetComponent<SpriteRenderer>();
+    }
+
+    public override void Start () {
 		base.Start ();
 
 		globalWaypoints = new Vector3[localWaypoints.Length];
 		for (int i =0; i < localWaypoints.Length; i++) {
 			globalWaypoints[i] = localWaypoints[i] + transform.position;
 		}
-	}
+     
+    }
 
 	void Update () {
 
@@ -37,11 +44,13 @@ public class PlatformController : RaycastController {
 
 		Vector3 velocity = CalculatePlatformMovement();
 
-		CalculatePassengerMovement(velocity);
+		//CalculatePassengerMovement(velocity);
 
-		MovePassengers (true);
+		//MovePassengers (true);
+
+        //move the object
 		transform.Translate (velocity);
-		MovePassengers (false);
+		//MovePassengers (false);
 	}
 
 	float Ease(float x) {
@@ -55,7 +64,6 @@ public class PlatformController : RaycastController {
 			return Vector3.zero;
 		}
 
-		fromWaypointIndex %= globalWaypoints.Length;
 		int toWaypointIndex = (fromWaypointIndex + 1) % globalWaypoints.Length;
 		float distanceBetweenWaypoints = Vector3.Distance (globalWaypoints [fromWaypointIndex], globalWaypoints [toWaypointIndex]);
 		percentBetweenWaypoints += Time.deltaTime * speed/distanceBetweenWaypoints;
@@ -72,15 +80,15 @@ public class PlatformController : RaycastController {
 				if (fromWaypointIndex >= globalWaypoints.Length-1) {
 					fromWaypointIndex = 0;
 					System.Array.Reverse(globalWaypoints);
-				}
-			}
+                }
+            }
 			nextMoveTime = Time.time + waitTime;
 		}
 
 		return newPos - transform.position;
 	}
 
-	void MovePassengers(bool beforeMovePlatform) {
+	/*void MovePassengers(bool beforeMovePlatform) {
 		foreach (PassengerMovement passenger in passengerMovement) {
 			if (!passengerDictionary.ContainsKey(passenger.transform)) {
 				passengerDictionary.Add(passenger.transform,passenger.transform.GetComponent<Controller2D>());
@@ -174,7 +182,7 @@ public class PlatformController : RaycastController {
 			standingOnPlatform = _standingOnPlatform;
 			moveBeforePlatform = _moveBeforePlatform;
 		}
-	}
+	}*/
 
 	void OnDrawGizmos() {
 		if (localWaypoints != null) {
