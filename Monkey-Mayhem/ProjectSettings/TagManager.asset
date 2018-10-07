@@ -7,7 +7,10 @@ TagManager:
   - Banana
   - Enemy
   - Score
+<<<<<<< HEAD
   - Time
+=======
+>>>>>>> d96f0381ba163114708dde694d59b39822b87d47
   layers:
   - Default
   - TransparentFX

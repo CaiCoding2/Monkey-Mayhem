@@ -6,67 +6,85 @@ public class Spawn : MonoBehaviour {
 
     public GameObject Obstacle;
     public GameObject player;
-    public Collider2D [] colliders;
+    GameObject SpawnObstacle;
+    public Collider2D[] colliders;
+    public float size;
+
+    Vector2 spawnLocation;
     [SerializeField]
     private float SpawnInterval = 1f;
     float nextSpawn;
 
-
     Vector2 CamSize;
 
 	// Use this for initialization
-	void Start () {
-      
+	void Awake () {
+        //get camera size
         CamSize = new Vector2(Camera.main.aspect * Camera.main.orthographicSize, Camera.main.aspect * Camera.main.orthographicSize);
-
+        
     }
-	
 
-    public void spawnObstacle()
+    // Update is called once per frame
+    void Update()
     {
-        bool canSpawn = false;
-        Vector2 SpawnLocation = new Vector2(0,0);
-
-        while (!canSpawn)
-        {
-            SpawnLocation = new Vector2(Random.Range(-CamSize.x, CamSize.x), player.transform.position.y + CamSize.y);
-
-            canSpawn = PreventSpawnOverlap(SpawnLocation);
-            if (canSpawn)
-            {
-                break;
-            }
-        }
-
-        GameObject newObstacle = Instantiate(Obstacle, SpawnLocation, Quaternion.identity);
-    }
-	// Update is called once per frame
-	void Update () {
+        
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + SpawnInterval;
-            spawnObstacle();
+            spawnLocation = new Vector2(Random.Range(-CamSize.x + 0.2f, CamSize.x - 0.2f), player.transform.position.y+CamSize.y + 5f);
+            GameObject spawnObstacle = Instantiate(Obstacle, spawnLocation, Quaternion.identity) as GameObject;
+
+            //change scale 
+            spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.7f,1.5f);
         }
-
-        
     }
-    bool PreventSpawnOverlap(Vector2 spawnPos)
+   /* public void spawn()
     {
-        colliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale, Vector2.Angle(Vector2.zero, transform.position));
+        Vector2 spawnPosition = new Vector2(0, 0);
+        bool spawnable = false;
 
-        for (int i = 0; i < colliders.Length; i++)
+        int safenet = 0;
+
+        while (!spawnable)
         {
-            Vector3 center = colliders[i].bounds.center;
+            float spwanPosX = Random.Range(-CamSize.x, CamSize.x);
+            float spawnPosY = CamSize.y;
+
+            spawnPosition = new Vector2(spwanPosX, spawnPosY);
+            spawnable = PreventOverlap(spawnPosition);
+            if (spawnable)
+            {
+                break;
+            }
+            safenet++;
+            if (safenet > 40)
+            {
+                break;
+                Debug.Log("Too Many");
+            }
+        }
+        GameObject newObstacle = Instantiate(Obstacle, spawnPosition, Quaternion.identity) as GameObject;
+    }
+
+    bool PreventOverlap(Vector2 spawnpos)
+    {
+        colliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale, Vector2.Angle(Vector2.zero, transform.position), mask);
+
+        for (int i =0; i < colliders.Length; i++)
+        {
+            Vector2 center = colliders[i].bounds.center;
+
             float width = colliders[i].bounds.extents.x;
-            float height = colliders[i].bounds.extents.y;
+            float height= colliders[i].bounds.extents.y;
 
             float leftExtent = center.x - width;
-            float rightExtent = center.x + width;
-            float BottomExtent = center.y - height;
-            float TopExtent = center.y + height;
-            if (spawnPos.x >= leftExtent && spawnPos.x <= rightExtent)
+            float RightExtent = center.x + width;
+            float bottomExtent = center.x - height;
+            float topExtent = center.x + height;
+
+            if(spawnpos.x >= leftExtent && spawnpos.x <= RightExtent)
             {
-                if (spawnPos.y >= BottomExtent && spawnPos.y <= TopExtent)
+                if(spawnpos.y >= bottomExtent && spawnpos.y <= topExtent)
                 {
                     return false;
                 }
@@ -74,4 +92,11 @@ public class Spawn : MonoBehaviour {
         }
         return true;
     }
+    void OnDrawGizmosSelected()
+    {
+        // Draw a semitransparent blue cube at the transforms position
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(transform.position, new Vector3(1, 1, 1));
+    }*/
+
 }
