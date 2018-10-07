@@ -7,13 +7,15 @@ public class Menu : MonoBehaviour {
 
 	public GameObject mainMenuHolder;
 	public GameObject optionsMenuHolder;
+	public GameObject creditsHolder;
 
 	public Slider[] volumeSliders;
 
-	void Start() {
-		
+	void Start()
+	{
+
+		SetMusicVolume(.1f); // music was too loud compared to everything else so I turned it down
 		volumeSliders [0].value = AudioManager.instance.masterVolumePercent;
-		print(volumeSliders[0].value);
 		volumeSliders [1].value = AudioManager.instance.musicVolumePercent;
 		volumeSliders [2].value = AudioManager.instance.sfxVolumePercent;
 
@@ -30,11 +32,19 @@ public class Menu : MonoBehaviour {
 	public void OptionsMenu() {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (true);
+		creditsHolder.SetActive (false);
 	}
 
 	public void MainMenu() {
 		mainMenuHolder.SetActive (true);
 		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+	}
+	
+	public void Credits() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (true);
 	}
 
 	public void SetMasterVolume(float value) {
@@ -47,6 +57,11 @@ public class Menu : MonoBehaviour {
 
 	public void SetSfxVolume(float value) {
 		AudioManager.instance.SetVolume (value, AudioManager.AudioChannel.Sfx);
+	}
+
+	public void playClick()
+	{
+		AudioManager.instance.PlaySound("Click", transform.position, 1);
 	}
 
 }

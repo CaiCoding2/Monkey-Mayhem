@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     
     public float masterVolumePercent  { get; private set; }
     public float sfxVolumePercent  { get; private set; }
-    public float musicVolumePercent  { get; private set; }
+    public float musicVolumePercent { get; private set; }
 
     AudioSource[] musicSources;
     int activeMusicSourceIndex;
@@ -23,8 +23,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     
     void Awake()
-    {
-        
+    {  
         if (instance != null)
         {
             Destroy(gameObject);
@@ -77,8 +76,9 @@ public class AudioManager : MonoBehaviour
 
     public void playMusic(AudioClip clip, float fadeDuration)
     {
-        activeMusicSourceIndex = 1 - activeMusicSourceIndex;
-        musicSources[activeMusicSourceIndex].clip = clip;
+        
+        activeMusicSourceIndex = 1 - activeMusicSourceIndex;        
+        musicSources[activeMusicSourceIndex].clip = clip;        
         musicSources[activeMusicSourceIndex].Play();
 
         StartCoroutine(AnimateMusicCrossFade(fadeDuration));

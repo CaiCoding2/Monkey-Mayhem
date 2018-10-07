@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1911964524309336}
+  m_IsPrefabAsset: 1
+--- !u!1 &1911964524309336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4548533225403064}
+  - component: {fileID: 114406339561170668}
+  - component: {fileID: 114923809168799784}
+  - component: {fileID: 114979403650262216}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4548533225403064
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911964524309336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114406339561170668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911964524309336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa78c03dfbf04b21b198033617c7641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114923809168799784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911964524309336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad1e95271ceb4692ac7545232cffd50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level1Theme: {fileID: 8300000, guid: c364632dba1e74ca3923aba6a1e185b4, type: 3}
+  menuTheme: {fileID: 8300000, guid: ffb551f3a521b47d096b245bc3b95b3c, type: 3}
+--- !u!114 &114979403650262216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911964524309336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb2e76d7e2ba4cea8eff5ff2530e692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsGroups:
+  - groupID: Jump
+    group:
+    - {fileID: 8300000, guid: c91e52590bd17f34fb64e8ffaf9834bd, type: 3}
+  - groupID: Slide
+    group:
+    - {fileID: 8300000, guid: e165337ab6ec84be9aee39da5c95d14b, type: 3}
+  - groupID: Footstep
+    group:
+    - {fileID: 8300000, guid: 61cd6008237147e43ad508ab4a9d00b2, type: 3}
+  - groupID: Banana
+    group:
+    - {fileID: 8300000, guid: b9c2c66bfaa0ddf428e90ea7122de98f, type: 3}
+  - groupID: Death
+    group:
+    - {fileID: 8300000, guid: 8be08b7712253bd448bf065641e8d46f, type: 3}

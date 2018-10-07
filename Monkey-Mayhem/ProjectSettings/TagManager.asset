@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Banana
   - Enemy
+  - Score
+  - Time
   layers:
   - Default
   - TransparentFX

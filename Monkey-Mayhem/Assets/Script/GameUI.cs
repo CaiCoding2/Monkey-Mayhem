@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour
 	public Image fadePlane2;
 	public GameObject gameOverUI;
 	public GameObject pauseMenuUI;
+	public static bool isGameOver;
 	
 	void Start ()
 	{
@@ -38,6 +39,7 @@ public class GameUI : MonoBehaviour
 	{
 		StartCoroutine(Fade (Color.clear, Color.white,1));
 		gameOverUI.SetActive (true);
+		isGameOver = true;
 	}
 
 	IEnumerator Fade(Color from, Color to, float time) {
@@ -54,10 +56,11 @@ public class GameUI : MonoBehaviour
 	
 	public void StartNewGame()
 	{
-		Time.timeScale = 1;
+		isGameOver = false;
 		ScoreTextScript.bananaAmount = 0;
 		ScoreTextScript.score = 0;
 		SceneManager.LoadScene("Level 1");
+		Time.timeScale = 1;
 	}
 
 	public void toMenu()
@@ -71,5 +74,10 @@ public class GameUI : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		pauseMenuUI.SetActive(false);
+	}
+	
+	public void playClick()
+	{
+		AudioManager.instance.PlaySound("Click", new Vector2 (0,0), 1);
 	}
 }
