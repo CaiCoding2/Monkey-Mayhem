@@ -18,4 +18,5 @@ public class ScoreTextScript : MonoBehaviour
     {
         text.text = bananaAmount.ToString();
     }
+    
 }

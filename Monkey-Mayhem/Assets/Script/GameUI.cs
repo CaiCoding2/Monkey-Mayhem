@@ -8,6 +8,7 @@ public class GameUI : MonoBehaviour
 {
 
 	public Image fadePlane;
+	public Image fadePlane2;
 	public GameObject gameOverUI;
 	
 	void Start ()
@@ -28,11 +29,14 @@ public class GameUI : MonoBehaviour
 		while (percent < 1) {
 			percent += Time.deltaTime * speed;
 			fadePlane.color = Color.Lerp(from,to,percent);
+			fadePlane2.color = Color.Lerp(from,to,percent);
 			yield return null;
 		}
 	}
 	
-	public void StartNewGame() {
+	public void StartNewGame()
+	{
+		ScoreTextScript.bananaAmount = 0;
 		SceneManager.LoadScene("Level 1");
 	}
 }
