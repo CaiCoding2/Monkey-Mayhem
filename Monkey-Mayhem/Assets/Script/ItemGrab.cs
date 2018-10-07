@@ -17,10 +17,19 @@ public class ItemGrab : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Player"))
-		{
-			AudioManager.instance.PlaySound("Banana", transform.position, 1);
-			Destroy(gameObject);
+		if (this.CompareTag("Banana")){
+			if (other.CompareTag("Player"))
+			{
+				AudioManager.instance.PlaySound("Banana", transform.position, 1);
+				Destroy(gameObject);
+			}
+		}
+		if (this.CompareTag("Enemy")){
+			if (other.CompareTag("Player"))
+			{
+				AudioManager.instance.PlaySound("Death", transform.position, 1);
+				Destroy(gameObject);
+			}
 		}
 	}
 }

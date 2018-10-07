@@ -33,6 +33,8 @@ public class Player : MonoBehaviour {
 	Controller2D controller;
 
 	public Animator animator;
+	
+	public event System.Action OnDeath;
 
 	
 	void Start() {
@@ -108,6 +110,11 @@ public class Player : MonoBehaviour {
 			velocity.y = 0;
 		}
 
+	    if (controller.collisions.above && controller.collisions.below)
+	    {
+		    die();
+	    }
+
 	    if (Input.GetKeyDown (KeyCode.Space)) {
 			if (wallSliding) {	
 				if (wallDirX == input.x) {
@@ -158,6 +165,20 @@ public class Player : MonoBehaviour {
 		{
 			ScoreTextScript.bananaAmount++;
 		}
+
+		if (other.CompareTag("Enemy"))
+		{
+			die();
+		}
+	}
+
+	void die()
+	{
+		if (OnDeath != null) {
+			OnDeath();
+		}
+
+		gameObject.SetActive(false);
 	}
 }
 
