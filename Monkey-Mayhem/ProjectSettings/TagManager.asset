@@ -5,12 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Banana
-  - Enemy
-  - Score
-<<<<<<< HEAD
   - Time
-=======
->>>>>>> d96f0381ba163114708dde694d59b39822b87d47
+  - Score
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,11 +17,11 @@ TagManager:
   - UI
   - 
   - 
-  - Background
-  - Ground
-  - Hazard
   - Player
-  - Background Trees
+  - Collision
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -49,17 +46,17 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 2859165617
-    locked: 0
-  - name: Ground
-    uniqueID: 1545989
-    locked: 0
-  - name: Hazard
-    uniqueID: 3948792179
+    uniqueID: 2906007981
     locked: 0
   - name: Player
-    uniqueID: 1464253861
+    uniqueID: 3291137659
+    locked: 0
+  - name: Grund
+    uniqueID: 991591909
+    locked: 0
+  - name: Collison
+    uniqueID: 824365181
     locked: 0
   - name: UI
-    uniqueID: 2064617485
+    uniqueID: 3954289343
     locked: 0
