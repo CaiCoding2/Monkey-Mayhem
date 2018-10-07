@@ -30,10 +30,17 @@ public class SpawnPoint : MonoBehaviour {
 	}
     void SpawnItem()
     {
-        int spawnIndex = Random.Range(0, possibleSpawn.Count);
-        int spawnObject = Random.Range(0, obstacle.Length);
+        if(possibleSpawn.Count > 0)
+        {
+            int spawnIndex = Random.Range(0, possibleSpawn.Count);
+            int spawnObject = Random.Range(0, obstacle.Length);
 
-        GameObject NewObstacle = Instantiate(obstacle[spawnObject], spawnpoint[spawnIndex].position, Quaternion.identity) as GameObject;
-        //NewObstacle.GetComponent<DestroyObstacle>();
+            GameObject NewObstacle = Instantiate(obstacle[spawnObject], possibleSpawn[spawnIndex].position, Quaternion.identity) as GameObject;
+            NewObstacle.GetComponent<DestroyObstacle>().mySpawnpPoint = possibleSpawn[spawnIndex];
+
+            possibleSpawn.RemoveAt(spawnIndex);
+
+        }
+       
     }
 }

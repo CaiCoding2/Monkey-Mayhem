@@ -311,6 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 107494641}
+  - component: {fileID: 107494642}
   m_Layer: 0
   m_Name: SpawnLocation
   m_TagString: Untagged
@@ -340,6 +341,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107494642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107494640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08cca24107761024e962bf8a2d9ce86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnpoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  time: 1.5
+  obstacle:
+  - {fileID: 1420794113858072, guid: 0b913b5de30892141a56dbc2d3885c6a, type: 2}
+  - {fileID: 1420794113858072, guid: 0b913b5de30892141a56dbc2d3885c6a, type: 2}
+  possibleSpawn: []
 --- !u!1 &138932310
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,7 +6101,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1966197431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f571ca87cfe5b54d8c015fabf7ce256, type: 3}
   m_Name: 
