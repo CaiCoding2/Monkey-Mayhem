@@ -50,10 +50,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        //player 
-	    
-	    
-	    
+   
         if (transform.position.x < -camSize)
         {
             // need to check if there object in new position

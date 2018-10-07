@@ -11,9 +11,9 @@ public class AudioManager : MonoBehaviour
         Music
     };
     
-    float masterVolumePercent = 2f;
-    float sfxVolumePercent = 1f;
-    private float musicVolumePercent = .04f;
+    public float masterVolumePercent  { get; private set; }
+    public float sfxVolumePercent  { get; private set; }
+    public float musicVolumePercent  { get; private set; }
 
     AudioSource[] musicSources;
     int activeMusicSourceIndex;
@@ -44,9 +44,10 @@ public class AudioManager : MonoBehaviour
                 newMusicSource.transform.parent = transform;
             }
             
-            masterVolumePercent = PlayerPrefs.GetFloat("master vol", masterVolumePercent);
-            sfxVolumePercent = PlayerPrefs.GetFloat("sfx vol", sfxVolumePercent);
-            musicVolumePercent = PlayerPrefs.GetFloat("music vol", musicVolumePercent);
+            masterVolumePercent = PlayerPrefs.GetFloat("master vol", 1);
+            sfxVolumePercent = PlayerPrefs.GetFloat("sfx vol", 1);
+            musicVolumePercent = PlayerPrefs.GetFloat("music vol", 1);
+            PlayerPrefs.Save();
         }
     }
 
@@ -55,22 +56,23 @@ public class AudioManager : MonoBehaviour
         switch (channel)
         {
             case AudioChannel.Master:
-                masterVolumePercent = musicVolumePercent;
+                masterVolumePercent = volumePercent;
                 break;
             case AudioChannel.Sfx:
-                sfxVolumePercent = musicVolumePercent;
+                sfxVolumePercent = volumePercent;
                 break;
             case AudioChannel.Music:
-                musicVolumePercent = musicVolumePercent;
+                musicVolumePercent = volumePercent;
                 break;
         }
 
         musicSources[0].volume = musicVolumePercent * masterVolumePercent;
         musicSources[1].volume = musicVolumePercent * masterVolumePercent;
         
-        PlayerPrefs.SetFloat("master vol", masterVolumePercent);
-        PlayerPrefs.SetFloat("sfx vol", sfxVolumePercent);
-        PlayerPrefs.SetFloat("music vol", musicVolumePercent);
+        PlayerPrefs.SetFloat("master vol", 1);
+        PlayerPrefs.SetFloat("sfx vol", 1);
+        PlayerPrefs.SetFloat("music vol", 1);
+        PlayerPrefs.Save();
     }
 
     public void playMusic(AudioClip clip, float fadeDuration)
