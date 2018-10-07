@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour {
 	public GameObject mainMenuHolder;
 	public GameObject optionsMenuHolder;
 	public GameObject creditsHolder;
+	public GameObject levelSelectHolder;
 
 	public Slider[] volumeSliders;
 
@@ -33,18 +34,28 @@ public class Menu : MonoBehaviour {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (true);
 		creditsHolder.SetActive (false);
+		levelSelectHolder.SetActive(false);
 	}
 
 	public void MainMenu() {
 		mainMenuHolder.SetActive (true);
 		optionsMenuHolder.SetActive (false);
 		creditsHolder.SetActive (false);
+		levelSelectHolder.SetActive(false);
 	}
 	
 	public void Credits() {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (false);
 		creditsHolder.SetActive (true);
+		levelSelectHolder.SetActive(false);
+	}
+	
+	public void levelSelect() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		levelSelectHolder.SetActive(true);
 	}
 
 	public void SetMasterVolume(float value) {
