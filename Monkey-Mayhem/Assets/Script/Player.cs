@@ -70,7 +70,10 @@ public class Player : MonoBehaviour {
 		animator.SetFloat("Going Up", velocity.y);
 		animator.SetBool("Touching Ground", controller.collisions.below);
 
-        
+	    if (transform.position.y + 3.72 > ScoreTextScript.score)
+	    {
+		    ScoreTextScript.score = transform.position.y + 3.72f;
+	    }
 
         float targetVelocityX = input.x * moveSpeed;
 		velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
@@ -111,6 +114,7 @@ public class Player : MonoBehaviour {
 	    {
 		    die();
 	    }
+	    
 
 	    if (Input.GetKeyDown (KeyCode.Space)) {
 			if (wallSliding) {	

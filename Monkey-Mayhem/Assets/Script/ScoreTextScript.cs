@@ -5,18 +5,31 @@ using UnityEngine.UI;
 
 public class ScoreTextScript : MonoBehaviour
 {
-    Text text;
+    Text bananaText;
+    Text scoreText;
+    
     public static int bananaAmount;
+    public static float score;
 
     void Start()
     {
-        text = GetComponent<Text>();
+        bananaText = GetComponent<Text>();
+        scoreText = GetComponent<Text>();
         
     }
 
     private void Update()
     {
-        text.text = bananaAmount.ToString();
+        if (this.CompareTag("Banana"))
+        {
+            bananaText.text = bananaAmount.ToString();
+        }
+
+        if (this.CompareTag("Score"))
+        {
+            score = Mathf.FloorToInt(score);
+            scoreText.text = score.ToString();
+        }
     }
     
 }

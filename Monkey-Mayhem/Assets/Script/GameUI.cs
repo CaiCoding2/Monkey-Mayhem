@@ -56,6 +56,7 @@ public class GameUI : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		ScoreTextScript.bananaAmount = 0;
+		ScoreTextScript.score = 0;
 		SceneManager.LoadScene("Level 1");
 	}
 
