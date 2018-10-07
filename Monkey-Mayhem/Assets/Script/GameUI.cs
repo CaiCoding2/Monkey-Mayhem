@@ -10,10 +10,28 @@ public class GameUI : MonoBehaviour
 	public Image fadePlane;
 	public Image fadePlane2;
 	public GameObject gameOverUI;
+	public GameObject pauseMenuUI;
 	
 	void Start ()
 	{
 		FindObjectOfType<Player>().OnDeath += onGameOver;
+	}
+	
+	void Update () {
+
+		if (!gameOverUI.active){
+			if(Input.GetKeyDown(KeyCode.P))
+			{
+				if(Time.timeScale == 1)
+				{
+					Time.timeScale = 0;
+					pauseMenuUI.SetActive(true);
+				} else if (Time.timeScale == 0){
+					Time.timeScale = 1;
+					pauseMenuUI.SetActive(false);
+				}
+			}
+		}
 	}
 
 	void onGameOver()
@@ -36,7 +54,21 @@ public class GameUI : MonoBehaviour
 	
 	public void StartNewGame()
 	{
+		Time.timeScale = 1;
 		ScoreTextScript.bananaAmount = 0;
 		SceneManager.LoadScene("Level 1");
+	}
+
+	public void toMenu()
+	{
+		Time.timeScale = 1;
+		ScoreTextScript.bananaAmount = 0;
+		SceneManager.LoadScene("Menu");
+	}
+
+	public void Continue()
+	{
+		Time.timeScale = 1;
+		pauseMenuUI.SetActive(false);
 	}
 }
