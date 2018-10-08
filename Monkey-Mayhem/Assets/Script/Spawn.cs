@@ -30,12 +30,12 @@ public class Spawn : MonoBehaviour {
         
         if (Time.time > nextSpawn)
         {
-            nextSpawn = Time.time + SpawnInterval;
-            spawnLocation = new Vector2(Random.Range(-CamSize.x + 0.2f, CamSize.x - 0.2f), player.transform.position.y+CamSize.y + 5f);
+            nextSpawn = Time.time + SpawnInterval; 
+            spawnLocation = new Vector2(Random.Range(-CamSize.x + 0.2f, CamSize.x - 0.2f), player.transform.position.y+2* CamSize.y);
             GameObject spawnObstacle = Instantiate(Obstacle, spawnLocation, Quaternion.identity) as GameObject;
 
             //change scale 
-            spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.7f,1.5f);
+            //spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.7f,1.5f);
         }
     }
    /* public void spawn()
