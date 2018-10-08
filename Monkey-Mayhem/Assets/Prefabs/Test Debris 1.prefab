@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212068164394088530}
   - component: {fileID: 61612436063401940}
   - component: {fileID: 50547462321295988}
+  - component: {fileID: 114797675794380360}
   m_Layer: 9
   m_Name: Test Debris 1
   m_TagString: Untagged
@@ -87,6 +88,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.52, y: 6.52}
   m_EdgeRadius: 0
+--- !u!114 &114797675794380360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1589541875422580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e9df5f7c056954fba79f89bdd92880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 50547462321295988}
 --- !u!212 &212068164394088530
 SpriteRenderer:
   m_ObjectHideFlags: 1
