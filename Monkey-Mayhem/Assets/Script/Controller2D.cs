@@ -112,7 +112,12 @@ public class Controller2D : RaycastController {
 
 			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength,Color.red);
 
-			if (hit) {
+            Vector2 rayOrigins = (directionY == -1) ? raycastOrigins.topRight : raycastOrigins.topLeft;
+            rayOrigins += Vector2.left * (verticalRaySpacing * i);
+            RaycastHit2D hit2 = Physics2D.Raycast(rayOrigins, Vector2.up * directionY, rayLength, collisionMask);
+            Debug.DrawRay(rayOrigins, Vector2.up * directionY * rayLength, Color.yellow);
+
+            if (hit) {
 			 
 				velocity.y = (hit.distance - skinWidth) * directionY;
 				rayLength = hit.distance;
@@ -122,8 +127,14 @@ public class Controller2D : RaycastController {
 				}
 
 				collisions.below = directionY == -1;
-				collisions.above = directionY == 1;
-			}
+                if (hit2) {
+                    collisions.above = directionY == -1;
+                }else
+                {
+                    collisions.above = directionY == 1;
+                }
+            }
+				
 		}
 
 		if (collisions.climbingSlope) {
