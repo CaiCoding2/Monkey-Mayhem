@@ -37,10 +37,7 @@ public class Player : MonoBehaviour {
 	public event System.Action OnDeath;
 
 	
-
-	
 	void Start() {
-        
 		controller = GetComponent<Controller2D> ();
 
 		gravity = -(2 * jumpHeight) / Mathf.Pow (timeToJumpApex, 2);
@@ -53,16 +50,6 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-	    
-	    /*if (Input.GetAxis("Axis 11") > 0f)
-		    print( "positive x");
-	    else if (Input.GetAxis("Axis 11") < 0f)
-		    print( "negative x");
-
-	    if (Input.GetAxis("Axis 12") > 0f)
-		    print( "positive y");
-	    else if (Input.GetAxis("Axis 12") < 0f)
-		    print( "negative y");*/
    
         if (transform.position.x < -camSize)
         {
@@ -74,20 +61,11 @@ public class Player : MonoBehaviour {
             transform.position = new Vector2(-camSize, transform.position.y);
         }
 
-        Vector2 input = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
-	    if (Input.GetAxis("Horizontal") == 0.0f)
-	    {
-		    input = new Vector2(Input.GetAxis("Axis 11"), -Input.GetAxis("Axis 12"));
-	    }
-	    
-
-	    int wallDirX = (controller.collisions.left) ? -1 : 1;
+        Vector2 input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
+        int wallDirX = (controller.collisions.left) ? -1 : 1;
 
         
-		animator.SetBool("SpaceBar", Input.GetKeyDown (KeyCode.Space) 
-		                             || Input.GetKeyDown (KeyCode.Joystick1Button0)
-		                             || Input.GetKeyDown (KeyCode.Joystick1Button1));
-	    //animator.SetBool("A Button", Input.GetKeyDown (KeyCode.Joystick1Button0));
+		animator.SetBool("SpaceBar", Input.GetKeyDown (KeyCode.Space));
 		
 		animator.SetFloat("Going Up", velocity.y);
 		animator.SetBool("Touching Ground", controller.collisions.below);
@@ -138,10 +116,7 @@ public class Player : MonoBehaviour {
 	    }
 	    
 
-	    if (Input.GetKeyDown (KeyCode.Space) 
-	        || Input.GetKeyDown(KeyCode.Joystick1Button0) 
-		    || Input.GetKeyDown(KeyCode.Joystick1Button1)) 
-	    {
+	    if (Input.GetKeyDown (KeyCode.Space)) {
 			if (wallSliding) {	
 				if (wallDirX == input.x) {
 					velocity.x = -wallDirX * wallJumpClimb.x * 1.5f;
