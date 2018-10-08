@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Monkey-Mayhem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Monkey-Mayhem/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs" afterDir="false" />
@@ -13,6 +14,10 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu.cs" afterDir="false" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu.cs" afterDir="false" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Menu.cs" afterDir="false" />
@@ -30,6 +35,7 @@
         <counts>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="project.closed" value="18" />
           <entry key="project.open.time.10" value="6" />
 =======
@@ -40,10 +46,15 @@
           <entry key="project.closed" value="14" />
           <entry key="project.open.time.10" value="4" />
 >>>>>>> parent of 9a53ca4... joy con control
+=======
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.10" value="4" />
+>>>>>>> parent of 9a53ca4... joy con control
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <entry key="project.open.time.8" value="4" />
@@ -54,6 +65,11 @@
           <entry key="project.open.time.9" value="2" />
           <entry key="project.opened" value="14" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="14" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
@@ -75,10 +91,14 @@
         <counts>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="cs" value="7920" />
 =======
           <entry key="cs" value="7025" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+          <entry key="cs" value="7025" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
           <entry key="cs" value="7025" />
 >>>>>>> parent of 9a53ca4... joy con control
@@ -88,10 +108,14 @@
         <counts>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="C#" value="7920" />
 =======
           <entry key="C#" value="7025" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+          <entry key="C#" value="7025" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
           <entry key="C#" value="7025" />
 >>>>>>> parent of 9a53ca4... joy con control
@@ -106,12 +130,17 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="2025">
               <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
 =======
             <state relative-caret-position="1155">
               <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+            <state relative-caret-position="1155">
+              <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
             <state relative-caret-position="1155">
               <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
@@ -218,6 +247,7 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="227">
               <caret line="65" column="13" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="13" />
               <folding>
@@ -239,6 +269,8 @@
 =======
 =======
 >>>>>>> parent of 9a53ca4... joy con control
+=======
+>>>>>>> parent of 9a53ca4... joy con control
             <state relative-caret-position="439">
               <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding>
@@ -258,7 +290,10 @@
                 <marker date="1538902270803" expanded="true" signature="1446:1506" ph="{...}" />
                 <marker date="1538902270803" expanded="true" signature="1533:1605" ph="{...}" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
               </folding>
@@ -269,6 +304,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/Menu.cs">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="1215">
@@ -297,6 +333,11 @@
               <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
               <folding>
 >>>>>>> parent of 9a53ca4... joy con control
+=======
+            <state relative-caret-position="233">
+              <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+              <folding>
+>>>>>>> parent of 9a53ca4... joy con control
                 <marker date="1538938289757" expanded="false" signature="6:101" ph="..." />
                 <marker date="1538938289757" expanded="true" signature="137:1940" ph="{...}" />
                 <marker date="1538938289757" expanded="true" signature="332:642" ph="{...}" />
@@ -311,7 +352,10 @@
                 <marker date="1538938289757" expanded="true" signature="1760:1838" ph="{...}" />
                 <marker date="1538938289757" expanded="true" signature="1864:1937" ph="{...}" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
               </folding>
@@ -425,6 +469,7 @@
   </component>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="FindInProjectRecents">
     <findStrings>
       <find>space</find>
@@ -436,6 +481,8 @@
   </component>
 =======
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
   <component name="Git.Settings">
@@ -471,6 +518,7 @@
         <option value="$PROJECT_DIR$/Assets/Script/AudioManager.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Script/Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/GameUI.cs" />
@@ -480,6 +528,11 @@
         <option value="$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Menu.cs" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+        <option value="$PROJECT_DIR$/Assets/Script/GameUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Menu.cs" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
         <option value="$PROJECT_DIR$/Assets/Script/GameUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs" />
@@ -497,11 +550,14 @@
   <component name="ProjectFrameBounds">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="x" value="190" />
     <option name="y" value="72" />
     <option name="width" value="1266" />
     <option name="height" value="826" />
 =======
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
     <option name="x" value="56" />
@@ -598,6 +654,7 @@
       <workItem from="1538938191596" duration="331000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1538947296606" duration="3223000" />
       <workItem from="1538951474817" duration="227000" />
       <workItem from="1538952268512" duration="1566000" />
@@ -607,16 +664,22 @@
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
 =======
 >>>>>>> parent of 9a53ca4... joy con control
+=======
+>>>>>>> parent of 9a53ca4... joy con control
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="53704000" />
 =======
     <option name="totallyTimeSpent" value="44877000" />
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+    <option name="totallyTimeSpent" value="44877000" />
+>>>>>>> parent of 9a53ca4... joy con control
 =======
     <option name="totallyTimeSpent" value="44877000" />
 >>>>>>> parent of 9a53ca4... joy con control
@@ -633,6 +696,7 @@
   <component name="ToolWindowManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="190" y="72" width="1266" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
@@ -640,12 +704,17 @@
 =======
 =======
 >>>>>>> parent of 9a53ca4... joy con control
+=======
+>>>>>>> parent of 9a53ca4... joy con control
     <frame x="56" y="39" width="1145" height="765" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1931097" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -734,6 +803,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Script/DetectUnknownControllerMappings.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Script/MusicManager.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -787,6 +857,9 @@
 =======
     <entry file="file://$PROJECT_DIR$/Assets/Script/Player.cs">
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+    <entry file="file://$PROJECT_DIR$/Assets/Script/Player.cs">
+>>>>>>> parent of 9a53ca4... joy con control
 =======
     <entry file="file://$PROJECT_DIR$/Assets/Script/Player.cs">
 >>>>>>> parent of 9a53ca4... joy con control
@@ -862,6 +935,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Script/Menu.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
@@ -887,6 +961,8 @@
     </entry>
 =======
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
     <entry file="file://$PROJECT_DIR$/Assets/Script/RaycastController.cs">
@@ -967,6 +1043,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Script/GameUI.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -993,6 +1070,13 @@
         <state relative-caret-position="240">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
+=======
+    <entry file="file://$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+>>>>>>> parent of 9a53ca4... joy con control
 =======
     <entry file="file://$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1033,13 +1117,17 @@
             <marker date="1538902270803" expanded="true" signature="1446:1506" ph="{...}" />
             <marker date="1538902270803" expanded="true" signature="1533:1605" ph="{...}" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Script/ScoreTextScript.cs">
@@ -1057,6 +1145,8 @@
             <marker date="1538960426077" expanded="true" signature="1146:1258" ph="{...}" />
             <marker date="1538960426077" expanded="true" signature="1297:1434" ph="{...}" />
 =======
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
     <entry file="file://$PROJECT_DIR$/Assets/Script/Menu.cs">
@@ -1078,7 +1168,10 @@
             <marker date="1538938289757" expanded="true" signature="1760:1838" ph="{...}" />
             <marker date="1538938289757" expanded="true" signature="1864:1937" ph="{...}" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e717ba898da8606bfbfc512061b31515900a60a6
+=======
+>>>>>>> parent of 9a53ca4... joy con control
 =======
 >>>>>>> parent of 9a53ca4... joy con control
           </folding>
