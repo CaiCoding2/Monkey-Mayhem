@@ -196,6 +196,10 @@ public class Player : MonoBehaviour {
 		{
 			die();
 		}
+		if (other.CompareTag("Lava"))
+		{
+			die();
+		}
 	}
 
 	void die()

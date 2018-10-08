@@ -16,9 +16,11 @@ public class PlatformController : RaycastController {
 	[Range(0,2)]
 	public float easeAmount;
 
+
 	int fromWaypointIndex;
 	float percentBetweenWaypoints;
 	float nextMoveTime;
+
 
 	//List<PassengerMovement> passengerMovement;
 	//Dictionary<Transform,Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
@@ -84,8 +86,8 @@ public class PlatformController : RaycastController {
             }
 			nextMoveTime = Time.time + waitTime;
 		}
-
-		return newPos - transform.position;
+				
+		return (newPos - transform.position);
 	}
 
 	/*void MovePassengers(bool beforeMovePlatform) {

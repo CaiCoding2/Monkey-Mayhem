@@ -9,6 +9,7 @@ TagManager:
   - Score
   - Enemy
   - Total
+  - Lava
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Player
   - Collision
-  - 
+  - Lava
   - 
   - 
   - 
@@ -57,6 +58,9 @@ TagManager:
     locked: 0
   - name: Collison
     uniqueID: 824365181
+    locked: 0
+  - name: Lava
+    uniqueID: 2489412873
     locked: 0
   - name: UI
     uniqueID: 3954289343

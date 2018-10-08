@@ -31,5 +31,12 @@ public class ItemGrab : MonoBehaviour
 				Destroy(gameObject);
 			}
 		}
+		if (this.CompareTag("Lava")){
+			if (other.CompareTag("Player"))
+			{
+				AudioManager.instance.PlaySound("Death", transform.position, 1);
+				Destroy(gameObject);
+			}
+		}
 	}
 }

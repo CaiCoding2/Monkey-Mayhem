@@ -35,7 +35,7 @@ public class Spawn : MonoBehaviour {
             GameObject spawnObstacle = Instantiate(Obstacle, spawnLocation, Quaternion.identity) as GameObject;
 
             //change scale 
-            //spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.7f,1.5f);
+            spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.5f,1.5f);
         }
     }
    /* public void spawn()
