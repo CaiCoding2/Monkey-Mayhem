@@ -304,6 +304,7 @@ RectTransform:
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &107494640
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +438,8 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+=======
+>>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem
 =======
 >>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem
 --- !u!1 &138932310
@@ -2103,6 +2106,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &531262615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,6 +2229,8 @@ Transform:
   m_Father: {fileID: 107494641}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem
 =======
 >>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem
 --- !u!1 &602853194
@@ -3366,6 +3372,7 @@ MonoBehaviour:
   verticalRaySpacing: 0
   collider: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &924924651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,6 +3516,8 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948295183}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem
 =======
 >>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem
 --- !u!1 &956122110
