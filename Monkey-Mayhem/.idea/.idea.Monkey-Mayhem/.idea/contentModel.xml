@@ -26,6 +26,10 @@
           <e p="RaycastController.cs" t="Include" />
           <e p="ScoreTextScript.cs" t="Include" />
           <e p="SoundLibrary.cs" t="Include" />
+          <e p="Spawn" t="Include">
+            <e p="DestroyObstacle.cs" t="Include" />
+            <e p="SpawnPoint.cs" t="Include" />
+          </e>
           <e p="Spawn.cs" t="Include" />
         </e>
       </e>
