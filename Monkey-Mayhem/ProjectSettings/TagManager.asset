@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Total
   - Lava
+  - Debirs
   layers:
   - Default
   - TransparentFX

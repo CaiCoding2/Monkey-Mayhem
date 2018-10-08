@@ -134,6 +134,7 @@ public class Player : MonoBehaviour {
 
 	    if (controller.collisions.above && controller.collisions.below)
 	    {
+		    AudioManager.instance.PlaySound("Squish", transform.position, 1);
 		    die();
 	    }
 	    
@@ -187,17 +188,27 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (other.CompareTag("Debris"))
+		{
+			print("wow");
+			AudioManager.instance.PlaySound("Banana", transform.position, 1);
+			ScoreTextScript.bananaAmount++;
+		}
+		
 		if (other.CompareTag("Banana"))
 		{
+			AudioManager.instance.PlaySound("Banana", transform.position, 1);
 			ScoreTextScript.bananaAmount++;
 		}
 
 		if (other.CompareTag("Enemy"))
 		{
 			die();
+			AudioManager.instance.PlaySound("Enemy", transform.position, 1);
 		}
 		if (other.CompareTag("Lava"))
 		{
+			AudioManager.instance.PlaySound("Lava", transform.position, 2);
 			die();
 		}
 	}

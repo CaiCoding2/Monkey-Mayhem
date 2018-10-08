@@ -1474,6 +1474,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[5].group.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[6].group.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4548533225403064, guid: aa2faf23728f24af8ab9122c5824fc0b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1506,6 +1521,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[5].groupID
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[5].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 00fee0751a76b4c11b26a1d0cf128b90, type: 3}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[4].groupID
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[6].groupID
+      value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[6].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: ee1beb6cef7f34c49a5200a17def38b5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa2faf23728f24af8ab9122c5824fc0b, type: 2}
   m_IsPrefabAsset: 0
