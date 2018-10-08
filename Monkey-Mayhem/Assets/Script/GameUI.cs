@@ -9,7 +9,6 @@ public class GameUI : MonoBehaviour
 
 	public Image fadePlane;
 	public Image fadePlane2;
-	public Image fadePlane3;
 	public GameObject gameOverUI;
 	public GameObject pauseMenuUI;
 	public static bool isGameOver;
@@ -55,7 +54,6 @@ public class GameUI : MonoBehaviour
 			percent += Time.deltaTime * speed;
 			fadePlane.color = Color.Lerp(from,to,percent);
 			fadePlane2.color = Color.Lerp(from,to,percent);
-			fadePlane3.color = Color.Lerp(from,to,percent);
 			yield return null;
 		}
 	}

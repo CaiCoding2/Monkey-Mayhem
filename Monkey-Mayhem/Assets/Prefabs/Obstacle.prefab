@@ -33,29 +33,10 @@ Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
-<<<<<<< HEAD:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
-<<<<<<< HEAD:Monkey-Mayhem/Assets/Prefabs/Test Debris 1.prefab
-  m_GameObject: {fileID: 1420794113858072}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2567555, y: -6.2731543, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-=======
-=======
->>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
-=======
->>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
   m_GameObject: {fileID: 1124763933014408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.2, y: 7.45, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
-<<<<<<< HEAD:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
-<<<<<<< HEAD:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
->>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
-=======
->>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
-=======
->>>>>>> parent of c91bd13... Merge branch 'master' of https://github.com/CaiCoding2/Monkey-Mayhem:Monkey-Mayhem/Assets/Prefabs/Obstacle.prefab
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

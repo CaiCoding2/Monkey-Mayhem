@@ -8,7 +8,6 @@ TagManager:
   - Time
   - Score
   - Enemy
-  - Total
   layers:
   - Default
   - TransparentFX

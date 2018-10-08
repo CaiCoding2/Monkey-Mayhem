@@ -1,4 +1,3 @@
-
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
@@ -14,10 +13,10 @@ public static class TestGamepadEditor
     static void OnHierarchyChange()
     {
 
-        if (EditorApplication.currentScene.Contains("controllerTest"))
+        if (EditorApplication.currentScene.Contains("controllerTest")) 
         {
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
-
+            
             //add our example axes (if not already present when we read the file below)
             SerializedObject serializedObject = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/InputManager.asset")[0]);
             SerializedProperty axesProperty = serializedObject.FindProperty("m_Axes");
@@ -425,158 +424,158 @@ public static class TestGamepadEditor
                 GetChildProperty(childElement, "type").intValue = 2;
                 GetChildProperty(childElement, "axis").intValue = 19;
                 GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
+				count++;
 
-                childElement = axesProperty.GetArrayElementAtIndex(count);
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 21";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 20;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 21";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 20;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                childElement = axesProperty.GetArrayElementAtIndex(count);
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 22";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 21;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 22";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 21;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 23";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 22;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                childElement = axesProperty.GetArrayElementAtIndex(count);
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 24";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 23;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 23";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 22;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 25";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 24;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                childElement = axesProperty.GetArrayElementAtIndex(count);
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 26";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 25;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 24";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 23;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 27";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 26;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
+				count++;
+				
+				childElement = axesProperty.GetArrayElementAtIndex(count);
 
-                childElement = axesProperty.GetArrayElementAtIndex(count);
-
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 25";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 24;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
-
-                childElement = axesProperty.GetArrayElementAtIndex(count);
-
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 26";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 25;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
-
-                childElement = axesProperty.GetArrayElementAtIndex(count);
-
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 27";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 26;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
-                count++;
-
-                childElement = axesProperty.GetArrayElementAtIndex(count);
-
-                GetChildProperty(childElement, "m_Name").stringValue = "Axis 28";
-                GetChildProperty(childElement, "descriptiveName").stringValue = "";
-                GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
-                GetChildProperty(childElement, "negativeButton").stringValue = "";
-                GetChildProperty(childElement, "positiveButton").stringValue = "";
-                GetChildProperty(childElement, "altNegativeButton").stringValue = "";
-                GetChildProperty(childElement, "altPositiveButton").stringValue = "";
-                GetChildProperty(childElement, "gravity").floatValue = 0f;
-                GetChildProperty(childElement, "dead").floatValue = .5f;
-                GetChildProperty(childElement, "sensitivity").floatValue = 1f;
-                GetChildProperty(childElement, "snap").boolValue = false;
-                GetChildProperty(childElement, "invert").boolValue = false;
-                GetChildProperty(childElement, "type").intValue = 2;
-                GetChildProperty(childElement, "axis").intValue = 27;
-                GetChildProperty(childElement, "joyNum").intValue = 0;
+				GetChildProperty(childElement, "m_Name").stringValue = "Axis 28";
+				GetChildProperty(childElement, "descriptiveName").stringValue = "";
+				GetChildProperty(childElement, "descriptiveNegativeName").stringValue = "";
+				GetChildProperty(childElement, "negativeButton").stringValue = "";
+				GetChildProperty(childElement, "positiveButton").stringValue = "";
+				GetChildProperty(childElement, "altNegativeButton").stringValue = "";
+				GetChildProperty(childElement, "altPositiveButton").stringValue = "";
+				GetChildProperty(childElement, "gravity").floatValue = 0f;
+				GetChildProperty(childElement, "dead").floatValue = .5f;
+				GetChildProperty(childElement, "sensitivity").floatValue = 1f;
+				GetChildProperty(childElement, "snap").boolValue = false;
+				GetChildProperty(childElement, "invert").boolValue = false;
+				GetChildProperty(childElement, "type").intValue = 2;
+				GetChildProperty(childElement, "axis").intValue = 27;
+				GetChildProperty(childElement, "joyNum").intValue = 0;
 
                 serializedObject.ApplyModifiedProperties();
             }

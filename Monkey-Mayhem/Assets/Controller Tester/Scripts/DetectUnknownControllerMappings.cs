@@ -1,11 +1,9 @@
-
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
 
-public class DetectUnknownControllerMappings : MonoBehaviour
-{
+public class DetectUnknownControllerMappings : MonoBehaviour {
 
     //axes
     public Text axis1Value;
@@ -28,14 +26,14 @@ public class DetectUnknownControllerMappings : MonoBehaviour
     public Text axis18Value;
     public Text axis19Value;
     public Text axis20Value;
-    public Text axis21Value;
-    public Text axis22Value;
-    public Text axis23Value;
-    public Text axis24Value;
-    public Text axis25Value;
-    public Text axis26Value;
-    public Text axis27Value;
-    public Text axis28Value;
+	public Text axis21Value;
+	public Text axis22Value;
+	public Text axis23Value;
+	public Text axis24Value;
+	public Text axis25Value;
+	public Text axis26Value;
+	public Text axis27Value;
+	public Text axis28Value;
 
     //buttons
     public Text button0Value;
@@ -59,12 +57,11 @@ public class DetectUnknownControllerMappings : MonoBehaviour
     public Text button18Value;
     public Text button19Value;
 
+	
+	// Update is called once per frame
+	void Update () {
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
+        
         //axis
 
         if (Input.GetAxis("Axis 1") > 0f)
@@ -207,61 +204,61 @@ public class DetectUnknownControllerMappings : MonoBehaviour
         else
             axis20Value.text = "";
 
-        if (Input.GetAxis("Axis 21") > 0f)
-            axis21Value.text = "positive";
-        else if (Input.GetAxis("Axis 21") < 0f)
-            axis21Value.text = "negative";
-        else
-            axis21Value.text = "";
-
-        if (Input.GetAxis("Axis 22") > 0f)
-            axis22Value.text = "positive";
-        else if (Input.GetAxis("Axis 22") < 0f)
-            axis22Value.text = "negative";
-        else
-            axis22Value.text = "";
-
-        if (Input.GetAxis("Axis 23") > 0f)
-            axis23Value.text = "positive";
-        else if (Input.GetAxis("Axis 23") < 0f)
-            axis23Value.text = "negative";
-        else
-            axis23Value.text = "";
-
-        if (Input.GetAxis("Axis 24") > 0f)
-            axis24Value.text = "positive";
-        else if (Input.GetAxis("Axis 24") < 0f)
-            axis24Value.text = "negative";
-        else
-            axis24Value.text = "";
-
-        if (Input.GetAxis("Axis 25") > 0f)
-            axis25Value.text = "positive";
-        else if (Input.GetAxis("Axis 25") < 0f)
-            axis25Value.text = "negative";
-        else
-            axis25Value.text = "";
-
-        if (Input.GetAxis("Axis 26") > 0f)
-            axis26Value.text = "positive";
-        else if (Input.GetAxis("Axis 26") < 0f)
-            axis26Value.text = "negative";
-        else
-            axis26Value.text = "";
-
-        if (Input.GetAxis("Axis 27") > 0f)
-            axis27Value.text = "positive";
-        else if (Input.GetAxis("Axis 27") < 0f)
-            axis27Value.text = "negative";
-        else
-            axis27Value.text = "";
-
-        if (Input.GetAxis("Axis 28") > 0f)
-            axis28Value.text = "positive";
-        else if (Input.GetAxis("Axis 28") < 0f)
-            axis28Value.text = "negative";
-        else
-            axis28Value.text = "";
+		if (Input.GetAxis("Axis 21") > 0f)
+			axis21Value.text = "positive";
+		else if (Input.GetAxis("Axis 21") < 0f)
+			axis21Value.text = "negative";
+		else
+			axis21Value.text = "";
+		
+		if (Input.GetAxis("Axis 22") > 0f)
+			axis22Value.text = "positive";
+		else if (Input.GetAxis("Axis 22") < 0f)
+			axis22Value.text = "negative";
+		else
+			axis22Value.text = "";
+		
+		if (Input.GetAxis("Axis 23") > 0f)
+			axis23Value.text = "positive";
+		else if (Input.GetAxis("Axis 23") < 0f)
+			axis23Value.text = "negative";
+		else
+			axis23Value.text = "";
+		
+		if (Input.GetAxis("Axis 24") > 0f)
+			axis24Value.text = "positive";
+		else if (Input.GetAxis("Axis 24") < 0f)
+			axis24Value.text = "negative";
+		else
+			axis24Value.text = "";
+		
+		if (Input.GetAxis("Axis 25") > 0f)
+			axis25Value.text = "positive";
+		else if (Input.GetAxis("Axis 25") < 0f)
+			axis25Value.text = "negative";
+		else
+			axis25Value.text = "";
+		
+		if (Input.GetAxis("Axis 26") > 0f)
+			axis26Value.text = "positive";
+		else if (Input.GetAxis("Axis 26") < 0f)
+			axis26Value.text = "negative";
+		else
+			axis26Value.text = "";
+		
+		if (Input.GetAxis("Axis 27") > 0f)
+			axis27Value.text = "positive";
+		else if (Input.GetAxis("Axis 27") < 0f)
+			axis27Value.text = "negative";
+		else
+			axis27Value.text = "";
+		
+		if (Input.GetAxis("Axis 28") > 0f)
+			axis28Value.text = "positive";
+		else if (Input.GetAxis("Axis 28") < 0f)
+			axis28Value.text = "negative";
+		else
+			axis28Value.text = "";
 
 
         //buttons
@@ -366,7 +363,6 @@ public class DetectUnknownControllerMappings : MonoBehaviour
             button19Value.text = "";
 
 
-
-    }
+	
+	}
 }
-

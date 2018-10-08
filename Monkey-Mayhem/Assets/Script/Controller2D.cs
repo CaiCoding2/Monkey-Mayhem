@@ -19,7 +19,7 @@ public class Controller2D : RaycastController {
 		UpdateRaycastOrigins ();
 		collisions.Reset ();
 		collisions.velocityOld = velocity;
-        //flip character if moving opposite direction
+
 		if (velocity.x != 0) {
 			collisions.faceDir = (int)Mathf.Sign(velocity.x);
 			if (collisions.faceDir > 0)
@@ -39,13 +39,10 @@ public class Controller2D : RaycastController {
 		HorizontalCollisions (ref velocity);
 		if (velocity.y != 0) {
 			VerticalCollisions (ref velocity);
-            //print("true");
 		}
-        //test
-        
-       
+
 		transform.Translate (velocity);
-        //standing on platform
+
 		if (standingOnPlatform) {
 			collisions.below = true;
 		}
@@ -58,7 +55,6 @@ public class Controller2D : RaycastController {
 		if (Mathf.Abs(velocity.x) < skinWidth) {
 			rayLength = 2*skinWidth;
 		}
-     
 		
 		for (int i = 0; i < horizontalRayCount; i ++) {
 			Vector2 rayOrigin = (directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight;
@@ -108,23 +104,15 @@ public class Controller2D : RaycastController {
 		float directionY = Mathf.Sign (velocity.y);
 		float rayLength = Mathf.Abs (velocity.y) + skinWidth;
 
-
 		for (int i = 0; i < verticalRayCount; i ++) {
 
 			Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
 
-            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.green);
+			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength,Color.red);
 
-            Vector2 rayOrigins = (directionY == -1) ? raycastOrigins.topRight : raycastOrigins.topLeft;
-            rayOrigins += Vector2.left * (verticalRaySpacing  * i );
-            RaycastHit2D hit2 = Physics2D.Raycast(rayOrigins, Vector2.up * directionY, rayLength, collisionMask);
-            Debug.DrawRay(rayOrigins, Vector2.up * directionY * rayLength, Color.yellow);
-
-          
-            
-            if (hit) {
+			if (hit) {
 			 
 				velocity.y = (hit.distance - skinWidth) * directionY;
 				rayLength = hit.distance;
@@ -134,19 +122,9 @@ public class Controller2D : RaycastController {
 				}
 
 				collisions.below = directionY == -1;
-                if (hit2)
-                {
-                    collisions.above = directionY == -1;
-
-                }
-                /*else
-                {
-                    collisions.above = directionY == 1;
-                }*/
-				
+				collisions.above = directionY == 1;
 			}
-          
-        }
+		}
 
 		if (collisions.climbingSlope) {
 			float directionX = Mathf.Sign(velocity.x);
