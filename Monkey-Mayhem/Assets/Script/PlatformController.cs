@@ -20,6 +20,7 @@ public class PlatformController : RaycastController {
 	int fromWaypointIndex;
 	float percentBetweenWaypoints;
 	float nextMoveTime;
+	private bool isGameOver = false;
 
 
 	//List<PassengerMovement> passengerMovement;
@@ -37,14 +38,24 @@ public class PlatformController : RaycastController {
 		for (int i =0; i < localWaypoints.Length; i++) {
 			globalWaypoints[i] = localWaypoints[i] + transform.position;
 		}
-     
+	    
+		FindObjectOfType<Player>().OnDeath += onGameOver;
     }
 
 	void Update () {
 
 		UpdateRaycastOrigins ();
 
-		Vector3 velocity = CalculatePlatformMovement();
+		Vector3 velocity;
+		if (!isGameOver)
+		{
+			velocity = CalculatePlatformMovement();
+		}
+		else
+		{
+			speed = 0;
+		}
+		velocity = CalculatePlatformMovement();
 
 		//CalculatePassengerMovement(velocity);
 
@@ -88,6 +99,11 @@ public class PlatformController : RaycastController {
 		}
 				
 		return (newPos - transform.position);
+	}
+
+	void onGameOver()
+	{
+		isGameOver = true;
 	}
 
 	/*void MovePassengers(bool beforeMovePlatform) {
