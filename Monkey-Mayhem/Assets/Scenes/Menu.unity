@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -622,17 +622,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2122942619}
-        m_MethodName: selectNextButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1802105329}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1188,7 +1177,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1802105327}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &570927619
@@ -1724,17 +1713,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2122942619}
-        m_MethodName: selectNextButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1802105329}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &790635281
@@ -2019,17 +1997,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2122942619}
-        m_MethodName: selectNextButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1802105329}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &845818697
@@ -2174,7 +2141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &925296520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2213,7 +2180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &992778451
 Transform:
   m_ObjectHideFlags: 0
@@ -3079,17 +3046,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2122942619}
-        m_MethodName: selectNextSlider
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1389068907}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1186073332
@@ -3363,17 +3319,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2122942619}
-        m_MethodName: selectNextButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 225674546}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3835,7 +3780,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -4303,6 +4248,7 @@ GameObject:
   - component: {fileID: 1779409893}
   - component: {fileID: 1779409892}
   - component: {fileID: 1779409891}
+  - component: {fileID: 1779409890}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4310,6 +4256,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1779409890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779409889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4643df91fee7a4b378f7b79bb01ddeb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadePlane: {fileID: 0}
+  fadePlane2: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  pauseMenuUI: {fileID: 0}
 --- !u!114 &1779409891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,7 +4409,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -4580,17 +4541,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2122942619}
-        m_MethodName: selectNextButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2054195311}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

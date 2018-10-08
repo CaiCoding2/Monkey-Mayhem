@@ -12,8 +12,6 @@ public class GameUI : MonoBehaviour
 	public GameObject gameOverUI;
 	public GameObject pauseMenuUI;
 	public static bool isGameOver;
-	public Button buttonToSelectOnGameOver;
-	public Button buttonToSelectOnPause;
 	
 	void Start ()
 	{
@@ -23,11 +21,10 @@ public class GameUI : MonoBehaviour
 	void Update () {
 
 		if (!gameOverUI.active){
-			if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button9))
+			if(Input.GetKeyDown(KeyCode.P))
 			{
 				if(Time.timeScale == 1)
 				{
-					buttonToSelectOnPause.Select();
 					Time.timeScale = 0;
 					pauseMenuUI.SetActive(true);
 				} else if (Time.timeScale == 0){
@@ -40,7 +37,6 @@ public class GameUI : MonoBehaviour
 
 	void onGameOver()
 	{
-		buttonToSelectOnGameOver.Select();
 		StartCoroutine(Fade (Color.clear, Color.white,1));
 		gameOverUI.SetActive (true);
 		isGameOver = true;
