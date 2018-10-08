@@ -75,4 +75,14 @@ public class Menu : MonoBehaviour {
 		AudioManager.instance.PlaySound("Click", transform.position, 1);
 	}
 
+	public void selectNextButton(Button button)
+	{
+		button.Select();
+	}
+
+	public void selectNextSlider(Slider slider)
+	{
+		slider.Select();
+	}
+
 }
