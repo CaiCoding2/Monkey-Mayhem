@@ -9,6 +9,7 @@ public class Spawn : MonoBehaviour {
     GameObject SpawnObstacle;
     public Collider2D[] colliders;
     public float size;
+    bool side = false;
 
     Vector2 spawnLocation;
     [SerializeField]
@@ -31,11 +32,11 @@ public class Spawn : MonoBehaviour {
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + SpawnInterval; 
-            spawnLocation = new Vector2(Random.Range(-CamSize.x + 2f, CamSize.x - 2f), player.transform.position.y+3* CamSize.y);
+            spawnLocation = new Vector2(Random.Range(-CamSize.x + 2f, CamSize.x - 2f), player.transform.position.y+2.5f* CamSize.y);
             GameObject spawnObstacle = Instantiate(Obstacle, spawnLocation, Quaternion.identity) as GameObject;
 
             //change scale 
-            //spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.5f,1.5f);
+            spawnObstacle.transform.localScale = spawnObstacle.transform.localScale * Random.Range(0.5f,.5f);
         }
     }
    /* public void spawn()

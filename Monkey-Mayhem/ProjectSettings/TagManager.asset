@@ -10,7 +10,9 @@ TagManager:
   - Enemy
   - Total
   - Lava
-  - Debirs
+  - BananaCountdown
+  - TimeCountdown
+  - Debris
   layers:
   - Default
   - TransparentFX

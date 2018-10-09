@@ -10,8 +10,10 @@ public class ScoreTextScript : MonoBehaviour
     Text bananaText;
     Text scoreText;
     Text timeText;
-    private Text totalText;
-    
+    Text totalText;
+    Text timeCountdownText;
+
+    public static float countdownSeconds = 31;
     public static int bananaAmount;
     public static float score;
     public static int seconds;
@@ -26,6 +28,7 @@ public class ScoreTextScript : MonoBehaviour
         scoreText = GetComponent<Text>();
         timeText = GetComponent<Text>();
         totalText = GetComponent<Text>();
+        timeCountdownText = GetComponent<Text>();
     }
 
     private void Update()
@@ -56,6 +59,16 @@ public class ScoreTextScript : MonoBehaviour
         {
             total = Mathf.FloorToInt(score) + bananaAmount;
             totalText.text = total.ToString();
+        }
+        
+        if (this.CompareTag("TimeCountdown"))
+        {
+            if (!GameUI.isGameOver && countdownSeconds > 1)
+            {
+                countdownSeconds -= Time.deltaTime;
+            }
+            seconds = Mathf.FloorToInt(countdownSeconds);
+            timeText.text = seconds.ToString();
         }
     }
     

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
@@ -22,10 +23,22 @@ public class Menu : MonoBehaviour {
 
 	}
 	
-	public void Play() {
+	public void PlayLevel1() {
 		SceneManager.LoadScene ("Level 1");
+		restartScores();
+	}
+	
+	public void PlayLevel1A() {
+		restartScores();
+		SceneManager.LoadScene ("Level 1 A");
+	}
+	
+	public void PlayLevel1B() {
+		restartScores();
+		SceneManager.LoadScene ("Level 1 B");
 	}
 
+	
 	public void Quit() {
 		Application.Quit ();
 	}
@@ -85,4 +98,12 @@ public class Menu : MonoBehaviour {
 		slider.Select();
 	}
 
+	public void restartScores()
+	{
+		ScoreTextScript.countdownSeconds = 31;
+		ScoreTextScript.score = 0;
+		ScoreTextScript.bananaAmount = 0;
+		ScoreTextScript.seconds = 0;
+		GameUI.isGameOver = false;
+	}
 }

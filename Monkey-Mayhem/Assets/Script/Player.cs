@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour {
 	public Animator animator;
 	
 	public event System.Action OnDeath;
+	public event System.Action OnChallengeCompletion;
 
 	
 
@@ -137,8 +139,17 @@ public class Player : MonoBehaviour {
 		    AudioManager.instance.PlaySound("Squish", transform.position, 1);
 		    die();
 	    }
+		
+	    if (ScoreTextScript.bananaAmount == 10)
+	    {
+		    completeChallenge();
+	    }
+	    else if (ScoreTextScript.countdownSeconds < 1f)
+	    {
+		    AudioManager.instance.PlaySound("Enemy", transform.position, 1);
+		    die();
+	    }
 	    
-
 	    if (Input.GetKeyDown (KeyCode.Space) 
 	        || Input.GetKeyDown(KeyCode.Joystick1Button0) 
 		    || Input.GetKeyDown(KeyCode.Joystick1Button1)) 
@@ -185,6 +196,7 @@ public class Player : MonoBehaviour {
 			//AudioManager.instance.PlaySound("Slide", transform.position, 6);
 		}
 	}
+	
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
@@ -199,6 +211,8 @@ public class Player : MonoBehaviour {
 		{
 			AudioManager.instance.PlaySound("Banana", transform.position, 1);
 			ScoreTextScript.bananaAmount++;
+			Destroy(other.gameObject);
+			
 		}
 
 		if (other.CompareTag("Enemy"))
@@ -217,6 +231,15 @@ public class Player : MonoBehaviour {
 	{
 		if (OnDeath != null) {
 			OnDeath();
+		}
+
+		gameObject.SetActive(false);
+	}
+	
+	void completeChallenge()
+	{
+		if (OnChallengeCompletion != null) {
+			OnChallengeCompletion();
 		}
 
 		gameObject.SetActive(false);
