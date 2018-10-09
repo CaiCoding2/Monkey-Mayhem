@@ -16,6 +16,7 @@ public class GameUI : MonoBehaviour
 	public Button buttonToSelectOnPause;
 	public Button buttonToSelectOnChallengeComplete;
 	public GameObject[] stars;
+	public static bool isPaused = false;
 	
 	
 	void Start ()
@@ -33,10 +34,13 @@ public class GameUI : MonoBehaviour
 			{
 				if(Time.timeScale == 1)
 				{
+					isPaused = true;
 					buttonToSelectOnPause.Select();
 					Time.timeScale = 0;
 					pauseMenuUI.SetActive(true);
-				} else if (Time.timeScale == 0){
+				} else if (Time.timeScale == 0)
+				{
+					isPaused = false;
 					Time.timeScale = 1;
 					pauseMenuUI.SetActive(false);
 				}

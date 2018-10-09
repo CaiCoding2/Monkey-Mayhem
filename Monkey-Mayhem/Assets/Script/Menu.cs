@@ -115,5 +115,6 @@ public class Menu : MonoBehaviour {
 		ScoreTextScript.bananaAmount = 0;
 		ScoreTextScript.seconds = 0;
 		GameUI.isGameOver = false;
+		GameUI.isPaused = false;
 	}
 }

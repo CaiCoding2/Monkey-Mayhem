@@ -18,40 +18,46 @@ public class Bird : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print("Updating..");
-        switch (direction)
-        {
-            case -1:
-                // Moving Right
-                if (currPosition.x > minXPosition)
-                {
-                    currPosition.x -= 0.1f;
-                }
-                else
-                {
-                    // Hit left boundary, change direction
-                    direction = 1;
-                    spriteRenderer.flipX = false;
-                }
-                break;
 
-            case 1:
-                // Moving Left
-                if (currPosition.x < maxXPosition)
-                {
-                    currPosition.x += 0.1f;
-                    print("Moving left");
-                }
-                else
-                {
-                    // Hit right boundary, change direction
-                    direction = -1;
-                    spriteRenderer.flipX = true;
-                    print("Turning right");
+	    if (!GameUI.isPaused)
+	    {
+	        switch (direction)
+	        {
+	            case -1:
+	                // Moving Right
+	                if (currPosition.x > minXPosition)
+	                {
+	                    currPosition.x -= 0.05f;
+	                }
+	                else
+	                {
+	                    // Hit left boundary, change direction
+	                    direction = 1;
+	                    spriteRenderer.flipX = false;
+	                }
 
-                }
-                break;
-        }
-        transform.localPosition = new Vector2(currPosition.x, currPosition.y);
-    }
+	                break;
+
+	            case 1:
+	                // Moving Left
+	                if (currPosition.x < maxXPosition)
+	                {
+	                    currPosition.x += 0.05f;
+	                    print("Moving left");
+	                }
+	                else
+	                {
+	                    // Hit right boundary, change direction
+	                    direction = -1;
+	                    spriteRenderer.flipX = true;
+	                    print("Turning right");
+
+	                }
+
+	                break;
+	        }
+
+	        transform.localPosition = new Vector2(currPosition.x, currPosition.y);
+	    }
+	}
 }
