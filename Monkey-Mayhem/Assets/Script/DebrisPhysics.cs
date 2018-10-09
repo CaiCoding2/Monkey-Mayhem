@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DebrisPhysics : MonoBehaviour
 {
+    public Animator animator;
+
     public float fallingSpeed = 10f;
     bool isFalling = true;
     public Rigidbody2D rb2d;
@@ -19,6 +21,10 @@ public class DebrisPhysics : MonoBehaviour
             print("falling");
             transform.Translate(0, -fallingSpeed * Time.deltaTime, 0);
         }
+        else
+        {
+            animator.SetBool("IsFalling", false);
+        }
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -29,7 +35,7 @@ public class DebrisPhysics : MonoBehaviour
         {// collider other object other than player
             isFalling = false;
             transform.Translate(0, 0, 0);
-            //print("You Hit debris!");
+            print("You Hit debris!");
             //rb2d.bodyType = RigidbodyType2D.Static;
         }
 
