@@ -15,7 +15,6 @@
         </e>
         <e p="Script" t="Include">
           <e p="AudioManager.cs" t="Include" />
-          <e p="Bird.cs" t="Include" />
           <e p="Controller2D.cs" t="Include" />
           <e p="DebrisPhysics.cs" t="Include" />
           <e p="Follow.cs" t="Include" />

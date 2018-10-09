@@ -154,7 +154,7 @@ public class GameUI : MonoBehaviour
 			}
 		}
 		
-		if (SceneManager.GetActiveScene().name == "Level 1 C")
+		if (SceneManager.GetActiveScene().name == "Level 1 D")
 		{
 			if (ScoreTextScript.countdownSeconds < 18)
 			{
@@ -169,6 +169,8 @@ public class GameUI : MonoBehaviour
 				return 2;
 			}
 		}
+		
+		
 		
 		return 0;
 	}
