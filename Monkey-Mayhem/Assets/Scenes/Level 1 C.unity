@@ -5377,6 +5377,11 @@ Prefab:
       propertyPath: fallingSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114342438610466806, guid: a5599c1360023c94ab742b34584d0484,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5599c1360023c94ab742b34584d0484, type: 2}
   m_IsPrefabAsset: 0

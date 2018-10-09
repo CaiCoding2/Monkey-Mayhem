@@ -101,6 +101,7 @@ public class GameUI : MonoBehaviour
 
 	public void Continue()
 	{
+		isPaused = false;
 		Time.timeScale = 1;
 		pauseMenuUI.SetActive(false);
 	}
@@ -178,11 +179,11 @@ public class GameUI : MonoBehaviour
 		
 		if (SceneManager.GetActiveScene().name == "Level 2 A")
 		{
-			if (ScoreTextScript.countdownSeconds < 25)
+			if (ScoreTextScript.countdownSeconds < 15)
 			{
 				return 1;
 			}
-			else if (ScoreTextScript.countdownSeconds > 28)
+			else if (ScoreTextScript.countdownSeconds > 22)
 			{
 				return 3;
 			}
