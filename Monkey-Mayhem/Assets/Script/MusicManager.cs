@@ -34,7 +34,10 @@ public class MusicManager : MonoBehaviour
         {
             clipToPlay = menuTheme;
         }
-        else if (sceneName == "Level 1" || sceneName == "Level 1 A" || sceneName == "Level 1 B")
+        else if (sceneName == "Level 1" || sceneName == "Level 1 A" 
+                                        || sceneName == "Level 1 B"
+                                        || sceneName == "Level 1 C"
+                                        || sceneName == "Level 1 D")
         {
             clipToPlay = level1Theme;
         }

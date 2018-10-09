@@ -37,6 +37,16 @@ public class Menu : MonoBehaviour {
 		restartScores();
 		SceneManager.LoadScene ("Level 1 B");
 	}
+	
+	public void PlayLevel1C() {
+		restartScores();
+		SceneManager.LoadScene ("Level 1 C");
+	}
+	
+	public void PlayLevel1D() {
+		restartScores();
+		SceneManager.LoadScene ("Level 1 D");
+	}
 
 	
 	public void Quit() {
