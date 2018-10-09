@@ -18,7 +18,8 @@ public class Bird : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        switch(direction)
+        print("Updating..");
+        switch (direction)
         {
             case -1:
                 // Moving Right
@@ -39,15 +40,18 @@ public class Bird : MonoBehaviour {
                 if (currPosition.x < maxXPosition)
                 {
                     currPosition.x += 0.1f;
+                    print("Moving left");
                 }
                 else
                 {
                     // Hit right boundary, change direction
                     direction = -1;
                     spriteRenderer.flipX = true;
+                    print("Turning right");
+
                 }
                 break;
         }
-        transform.localPosition = new Vector2(currPosition.x, 0.0f);
+        transform.localPosition = new Vector2(currPosition.x, currPosition.y);
     }
 }
