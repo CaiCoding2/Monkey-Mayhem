@@ -5146,7 +5146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f571ca87cfe5b54d8c015fabf7ce256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obstacle: {fileID: 1589541875422580, guid: a5599c1360023c94ab742b34584d0484, type: 2}
+  Obstacle: {fileID: 1030724699730588, guid: b269eda70ff97b34d9749df782db7f05, type: 2}
   player: {fileID: 1336123621}
   colliders: []
   size: 0
