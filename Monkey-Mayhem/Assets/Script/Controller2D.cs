@@ -112,10 +112,11 @@ public class Controller2D : RaycastController {
 
 			Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength,Color.red);
 
-            Vector2 rayOrigins = (directionY == -1) ? raycastOrigins.topRight : raycastOrigins.topLeft;
-            rayOrigins += Vector2.left * (verticalRaySpacing * i);
-            RaycastHit2D hit2 = Physics2D.Raycast(rayOrigins, Vector2.up * directionY, rayLength, collisionMask);
-            Debug.DrawRay(rayOrigins, Vector2.up * directionY * rayLength, Color.yellow);
+            Vector2 rayOrigins = (directionY == 1) ? raycastOrigins.topLeft : raycastOrigins.topLeft;
+            rayOrigins += Vector2.right * (verticalRaySpacing * i + velocity.x);
+            RaycastHit2D hit2 = Physics2D.Raycast(rayOrigins, Vector2.down * directionY, rayLength, collisionMask);
+            Debug.DrawRay(rayOrigins, Vector2.down * directionY * rayLength, Color.yellow);
+            print(collisions.above);
 
             if (hit) {
 			 
@@ -127,15 +128,21 @@ public class Controller2D : RaycastController {
 				}
 
 				collisions.below = directionY == -1;
-                if (hit2) {
-                    collisions.above = directionY == -1;
-                }else
+                //collisions.above = directionY == -1;
+
+                if (hit2)
                 {
+                    collisions.above = directionY == -1;
+                }
+                else
+                {
+                    print("not Hit");
                     collisions.above = directionY == 1;
                 }
+
             }
-				
-		}
+
+        }
 
 		if (collisions.climbingSlope) {
 			float directionX = Mathf.Sign(velocity.x);

@@ -139,8 +139,18 @@ public class Player : MonoBehaviour {
 		    AudioManager.instance.PlaySound("Squish", transform.position, 1);
 		    die();
 	    }
-		
-	    if (ScoreTextScript.bananaAmount == 10)
+        if (controller.collisions.above)
+        {
+            print("above");
+
+        }
+        if (controller.collisions.below)
+        {
+            print("below");
+
+        }
+
+        if (ScoreTextScript.bananaAmount == 10)
 	    {
 		    completeChallenge();
 	    }

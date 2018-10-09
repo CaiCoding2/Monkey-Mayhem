@@ -86,7 +86,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(AudioClip clip, Vector3 pos, float soundMultiply)
     {
-        AudioSource.PlayClipAtPoint(clip, pos, (sfxVolumePercent * soundMultiply) * masterVolumePercent);
+        //AudioSource.PlayClipAtPoint(clip, pos, (sfxVolumePercent * soundMultiply) * masterVolumePercent);
     }
 
     public void PlaySound(string soundName, Vector3 pos, float soundMultiply)

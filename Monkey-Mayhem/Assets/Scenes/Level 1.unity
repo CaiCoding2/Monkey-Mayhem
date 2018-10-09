@@ -801,8 +801,11 @@ MonoBehaviour:
   fadePlane: {fileID: 1381949455}
   gameOverUI: {fileID: 217210369}
   pauseMenuUI: {fileID: 70143373}
+  challengeComppleteUI: {fileID: 0}
   buttonToSelectOnGameOver: {fileID: 1879053525}
   buttonToSelectOnPause: {fileID: 1267302697}
+  buttonToSelectOnChallengeComplete: {fileID: 0}
+  stars: []
 --- !u!1 &277345784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4852,7 +4855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1494103696
 Animator:
   serializedVersion: 3
