@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour
 
     public AudioClip level1Theme;
     public AudioClip menuTheme;
+    public AudioClip level2Theme;
 
     string sceneName;
 
@@ -40,6 +41,13 @@ public class MusicManager : MonoBehaviour
                                         || sceneName == "Level 1 D")
         {
             clipToPlay = level1Theme;
+        }
+        else if (sceneName == "Level 2" || sceneName == "Level 2 A" 
+                                        || sceneName == "Level 2 B"
+                                        || sceneName == "Level 2 C"
+                                        || sceneName == "Level 2 D")
+        {
+            clipToPlay = level2Theme;
         }
 
         if (clipToPlay != null)

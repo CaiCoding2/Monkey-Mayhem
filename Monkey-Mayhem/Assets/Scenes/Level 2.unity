@@ -1493,6 +1493,11 @@ Prefab:
       propertyPath: soundsGroups.Array.data[7].group.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: c4ace080898a04d1399f546ba648e018, type: 3}
+    - target: {fileID: 114923809168799784, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: level2Theme
+      value: 
+      objectReference: {fileID: 8300000, guid: b556714bc36ea4124a6206d47703fbc1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa2faf23728f24af8ab9122c5824fc0b, type: 2}
   m_IsPrefabAsset: 0
