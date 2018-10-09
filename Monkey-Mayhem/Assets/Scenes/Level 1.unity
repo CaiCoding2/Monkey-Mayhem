@@ -1409,7 +1409,7 @@ Prefab:
     - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
         type: 2}
       propertyPath: soundsGroups.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
         type: 2}
@@ -1419,6 +1419,11 @@ Prefab:
     - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
         type: 2}
       propertyPath: soundsGroups.Array.data[6].group.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[7].group.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4548533225403064, guid: aa2faf23728f24af8ab9122c5824fc0b, type: 2}
@@ -1478,6 +1483,16 @@ Prefab:
       propertyPath: soundsGroups.Array.data[6].group.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: ee1beb6cef7f34c49a5200a17def38b5, type: 3}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[7].groupID
+      value: Squish
+      objectReference: {fileID: 0}
+    - target: {fileID: 114979403650262216, guid: aa2faf23728f24af8ab9122c5824fc0b,
+        type: 2}
+      propertyPath: soundsGroups.Array.data[7].group.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c4ace080898a04d1399f546ba648e018, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa2faf23728f24af8ab9122c5824fc0b, type: 2}
   m_IsPrefabAsset: 0
@@ -2247,8 +2262,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 676981476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.724, y: 2.065, z: 0.212}
-  m_LocalScale: {x: 6.993562, y: 4.5674815, z: 6.422632}
+  m_LocalPosition: {x: -2.84, y: 46.4, z: 0.21}
+  m_LocalScale: {x: 0.54440546, y: 0.6305089, z: 0.5050122}
   m_Children: []
   m_Father: {fileID: 602853195}
   m_RootOrder: 0
@@ -4651,7 +4666,7 @@ MonoBehaviour:
   localWaypoints:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 200, z: 0}
-  speed: 1
+  speed: 0.5
   cyclic: 1
   waitTime: 0
   easeAmount: 0
@@ -4783,8 +4798,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1425551048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0.212}
-  m_LocalScale: {x: 4.8, y: 4.770857, z: 1.004391}
+  m_LocalPosition: {x: -3, y: 39.8, z: 0.21}
+  m_LocalScale: {x: 1.1337863, y: 1.3420014, z: 0.23733757}
   m_Children: []
   m_Father: {fileID: 1001297521}
   m_RootOrder: 1
@@ -6197,7 +6212,7 @@ MonoBehaviour:
   player: {fileID: 1336123621}
   colliders: []
   size: 0
-  SpawnInterval: 0.6
+  SpawnInterval: 0.7
 --- !u!4 &1966197433
 Transform:
   m_ObjectHideFlags: 0

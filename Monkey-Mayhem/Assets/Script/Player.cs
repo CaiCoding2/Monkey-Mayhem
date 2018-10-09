@@ -209,14 +209,7 @@ public class Player : MonoBehaviour {
 	
 
 	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag("Debris"))
-		{
-			print("wow");
-			AudioManager.instance.PlaySound("Banana", transform.position, 1);
-			ScoreTextScript.bananaAmount++;
-		}
-		
+	{	
 		if (other.CompareTag("Banana"))
 		{
 			AudioManager.instance.PlaySound("Banana", transform.position, 1);

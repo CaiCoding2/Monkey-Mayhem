@@ -32,7 +32,7 @@ public class Spawn : MonoBehaviour {
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + SpawnInterval; 
-            spawnLocation = new Vector2(Random.Range(-CamSize.x + 2f, CamSize.x - 2f), player.transform.position.y+2.5f* CamSize.y);
+            spawnLocation = new Vector2(Random.Range(-CamSize.x + 2f, CamSize.x - 2f), player.transform.position.y+4f* CamSize.y);
             GameObject spawnObstacle = Instantiate(Obstacle, spawnLocation, Quaternion.identity) as GameObject;
 
             //change scale 

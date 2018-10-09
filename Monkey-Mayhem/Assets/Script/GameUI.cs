@@ -54,6 +54,7 @@ public class GameUI : MonoBehaviour
 
 	void onChallengeCompleted()
 	{
+		AudioManager.instance.PlaySound("Victory", new Vector2 (0,0), 1);
 		buttonToSelectOnChallengeComplete.Select();
 		StartCoroutine(Fade (Color.clear, Color.white,1));
 		challengeComppleteUI.SetActive (true);

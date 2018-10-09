@@ -2430,9 +2430,9 @@ Transform:
   m_LocalPosition: {x: 3.27, y: 1.1, z: -0.21224819}
   m_LocalScale: {x: 1.152032, y: 1.152032, z: 1.152032}
   m_Children:
-  - {fileID: 676981477}
   - {fileID: 1946470790}
   - {fileID: 1824309330}
+  - {fileID: 676981477}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2534,11 +2534,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 676981476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.724, y: 2.065, z: 0.212}
-  m_LocalScale: {x: 6.993562, y: 4.5674815, z: 6.422632}
+  m_LocalPosition: {x: -2.8, y: 45.5, z: 0.212}
+  m_LocalScale: {x: 0.5474982, y: 0.61649257, z: 0.61459774}
   m_Children: []
   m_Father: {fileID: 602853195}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &676981478
 SpriteRenderer:
@@ -2580,7 +2580,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.84, y: 2.16}
+  m_Size: {x: 39.999996, y: 183.87}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5210,8 +5210,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1425551048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0.212}
-  m_LocalScale: {x: 4.8, y: 4.770857, z: 1.004391}
+  m_LocalPosition: {x: -2.54, y: 39.24, z: 0.21}
+  m_LocalScale: {x: 1.1960803, y: 1.3167535, z: 0.24065149}
   m_Children: []
   m_Father: {fileID: 1001297521}
   m_RootOrder: 1
@@ -6085,7 +6085,7 @@ Transform:
   m_LocalScale: {x: 5.686359, y: 6.448563, z: 1.3575921}
   m_Children: []
   m_Father: {fileID: 602853195}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1824309331
 SpriteRenderer:
@@ -6444,7 +6444,7 @@ Transform:
   m_LocalScale: {x: 5.686359, y: 7.0520487, z: 1.4846419}
   m_Children: []
   m_Father: {fileID: 602853195}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1946470791
 SpriteRenderer:
