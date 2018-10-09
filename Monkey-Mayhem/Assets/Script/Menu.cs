@@ -47,6 +47,81 @@ public class Menu : MonoBehaviour {
 		restartScores();
 		SceneManager.LoadScene ("Level 1 D");
 	}
+	
+	public void PlayLevel2() {
+		restartScores();
+		SceneManager.LoadScene ("Level 2");
+	} 
+	
+	public void PlayLevel2A() {
+		restartScores();
+		SceneManager.LoadScene ("Level 2 A");
+	} 
+	
+	public void PlayLevel2B() {
+		restartScores();
+		SceneManager.LoadScene ("Level 2 B");
+	} 
+	
+	public void PlayLevel2C() {
+		restartScores();
+		SceneManager.LoadScene ("Level 2 C");
+	} 
+	
+	public void PlayLevel2D() {
+		restartScores();
+		SceneManager.LoadScene ("Level 2 D");
+	} 
+	
+	public void PlayLevel3() {
+        restartScores();
+        SceneManager.LoadScene ("Level 3");
+    }
+	
+	public void PlayLevel3A() {
+		restartScores();
+		SceneManager.LoadScene ("Level 3 A");
+	}
+	
+	public void PlayLevel3B() {
+		restartScores();
+		SceneManager.LoadScene ("Level 3 B");
+	}
+	
+	public void PlayLevel3C() {
+		restartScores();
+		SceneManager.LoadScene ("Level 3 C");
+	}
+	
+	public void PlayLevel3D() {
+		restartScores();
+		SceneManager.LoadScene ("Level 3 D");
+	}
+        
+    public void PlayLevel4() {
+         restartScores();
+         SceneManager.LoadScene ("Level 4");
+    }
+	
+	public void PlayLevel4A() {
+		restartScores();
+		SceneManager.LoadScene ("Level 4 A");
+	}
+	
+	public void PlayLevel4B() {
+		restartScores();
+		SceneManager.LoadScene ("Level 4 B");
+	}
+	
+	public void PlayLevel4C() {
+		restartScores();
+		SceneManager.LoadScene ("Level 4 C");
+	}
+	
+	public void PlayLevel4D() {
+		restartScores();
+		SceneManager.LoadScene ("Level 4 D");
+	}
 
 	
 	public void Quit() {

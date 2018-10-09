@@ -43,14 +43,14 @@ public class Bird : MonoBehaviour {
 	                if (currPosition.x < maxXPosition)
 	                {
 	                    currPosition.x += 0.05f;
-	                    print("Moving left");
+	                  
 	                }
 	                else
 	                {
 	                    // Hit right boundary, change direction
 	                    direction = -1;
 	                    spriteRenderer.flipX = true;
-	                    print("Turning right");
+	                    
 
 	                }
 

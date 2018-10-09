@@ -16,7 +16,7 @@ public class DebrisPhysics : MonoBehaviour
     {
         if (isFalling)
         {
-            print("falling");
+           
             transform.Translate(0, -fallingSpeed * Time.deltaTime, 0);
         }
 

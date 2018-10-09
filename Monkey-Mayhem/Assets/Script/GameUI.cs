@@ -21,6 +21,7 @@ public class GameUI : MonoBehaviour
 	
 	void Start ()
 	{
+
 		
 		FindObjectOfType<Player>().OnDeath += onGameOver;
 		FindObjectOfType<Player>().OnChallengeCompletion += onChallengeCompleted;
@@ -175,7 +176,197 @@ public class GameUI : MonoBehaviour
 			}
 		}
 		
+		if (SceneManager.GetActiveScene().name == "Level 2 A")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
 		
+		if (SceneManager.GetActiveScene().name == "Level 2 B")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 2 C")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 2 D")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 3 A")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 3 B")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 3 C")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 3 D")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 4 A")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 4 B")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 4 C")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 4 D")
+		{
+			if (ScoreTextScript.countdownSeconds < 25)
+			{
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 28)
+			{
+				return 3;
+			}
+			else
+			{
+				return 2;
+			}
+		}
 		
 		return 0;
 	}

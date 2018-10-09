@@ -37,6 +37,7 @@ public class Player : MonoBehaviour {
 	
 	public event System.Action OnDeath;
 	public event System.Action OnChallengeCompletion;
+	
 
 	
 
@@ -85,7 +86,7 @@ public class Player : MonoBehaviour {
 
 	    int wallDirX = (controller.collisions.left) ? -1 : 1;
 
-        
+       
 		animator.SetBool("SpaceBar", Input.GetKeyDown (KeyCode.Space) 
 		                             || Input.GetKeyDown (KeyCode.Joystick1Button0)
 		                             || Input.GetKeyDown (KeyCode.Joystick1Button1));
@@ -139,16 +140,6 @@ public class Player : MonoBehaviour {
 		    AudioManager.instance.PlaySound("Squish", transform.position, 1);
 		    die();
 	    }
-        if (controller.collisions.above)
-        {
-            print("above");
-
-        }
-        if (controller.collisions.below)
-        {
-            print("below");
-
-        }
 
         if (ScoreTextScript.bananaAmount == 10)
 	    {
@@ -193,9 +184,12 @@ public class Player : MonoBehaviour {
 
 	void runningSound()
 	{
-		if (controller.collisions.below && (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f || Mathf.Abs(velocity.x) > 0.4))
+		if ((controller.collisions.below && (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f || Mathf.Abs(velocity.x) > 0.4)
+		                                 && GameUI.isGameOver == false))
 		{
-			AudioManager.instance.PlaySound("Footstep", transform.position, 200f);
+			
+				AudioManager.instance.PlaySound("Footstep", transform.position, 200f);
+			
 		}
 	}
 	

@@ -64,8 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad1e95271ceb4692ac7545232cffd50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level1Theme: {fileID: 8300000, guid: c364632dba1e74ca3923aba6a1e185b4, type: 3}
   menuTheme: {fileID: 8300000, guid: ffb551f3a521b47d096b245bc3b95b3c, type: 3}
+  level1Theme: {fileID: 8300000, guid: c364632dba1e74ca3923aba6a1e185b4, type: 3}
+  level2Theme: {fileID: 8300000, guid: b556714bc36ea4124a6206d47703fbc1, type: 3}
+  level3Theme: {fileID: 8300000, guid: 8201699cc97f3476a8e6cbbec88fa635, type: 3}
+  level4Theme: {fileID: 8300000, guid: 93ff2f4c7cf9f404f89bc29dff438587, type: 3}
 --- !u!114 &114979403650262216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +93,18 @@ MonoBehaviour:
   - groupID: Banana
     group:
     - {fileID: 8300000, guid: b9c2c66bfaa0ddf428e90ea7122de98f, type: 3}
-  - groupID: Death
+  - groupID: Enemy
     group:
     - {fileID: 8300000, guid: 8be08b7712253bd448bf065641e8d46f, type: 3}
+  - groupID: Click
+    group:
+    - {fileID: 8300000, guid: 00fee0751a76b4c11b26a1d0cf128b90, type: 3}
+  - groupID: Lava
+    group:
+    - {fileID: 8300000, guid: ee1beb6cef7f34c49a5200a17def38b5, type: 3}
+  - groupID: Squish
+    group:
+    - {fileID: 8300000, guid: c4ace080898a04d1399f546ba648e018, type: 3}
+  - groupID: Victory
+    group:
+    - {fileID: 8300000, guid: d9d48c47405d5471da412febfd922c0d, type: 3}
