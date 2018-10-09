@@ -24,7 +24,7 @@ public class Bird : MonoBehaviour {
                 // Moving Right
                 if (currPosition.x > minXPosition)
                 {
-                    currPosition.x -= 0.1f;
+                    currPosition.x -= 0.05f;
                 }
                 else
                 {
@@ -38,7 +38,7 @@ public class Bird : MonoBehaviour {
                 // Moving Left
                 if (currPosition.x < maxXPosition)
                 {
-                    currPosition.x += 0.1f;
+                    currPosition.x += 0.05f;
                 }
                 else
                 {
@@ -48,6 +48,6 @@ public class Bird : MonoBehaviour {
                 }
                 break;
         }
-        transform.localPosition = new Vector2(currPosition.x, 0.0f);
+        transform.localPosition = new Vector2(currPosition.x, currPosition.y);
     }
 }
