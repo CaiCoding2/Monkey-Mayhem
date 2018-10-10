@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
@@ -9,9 +10,17 @@ public class Menu : MonoBehaviour {
 	public GameObject mainMenuHolder;
 	public GameObject optionsMenuHolder;
 	public GameObject creditsHolder;
-	public GameObject levelSelectHolder;
+	public GameObject classicLevelSelectHolder;
+	public GameObject playMenuHolder;
+	public GameObject challengeLevelSelectHolder;
+	public GameObject jungleChallangeSelectHolder;
+	public GameObject volcanoChallangeSelectHolder;
+	public GameObject skyChallangeSelectHolder;
+	public GameObject spaceChallangeSelectHolder;
 
 	public Slider[] volumeSliders;
+	
+	public GameObject[] stars1A;
 
 	void Start()
 	{
@@ -123,6 +132,10 @@ public class Menu : MonoBehaviour {
 		SceneManager.LoadScene ("Level 4 D");
 	}
 
+	public void PlayEndless() {
+		restartScores();
+		SceneManager.LoadScene ("Endless");
+	}
 	
 	public void Quit() {
 		Application.Quit ();
@@ -132,28 +145,131 @@ public class Menu : MonoBehaviour {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (true);
 		creditsHolder.SetActive (false);
-		levelSelectHolder.SetActive(false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+		
 	}
 
 	public void MainMenu() {
 		mainMenuHolder.SetActive (true);
 		optionsMenuHolder.SetActive (false);
 		creditsHolder.SetActive (false);
-		levelSelectHolder.SetActive(false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+	}
+	
+	public void PlaynMenu() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(true);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
 	}
 	
 	public void Credits() {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (false);
 		creditsHolder.SetActive (true);
-		levelSelectHolder.SetActive(false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
 	}
 	
-	public void levelSelect() {
+	public void classicLevelSelect() {
 		mainMenuHolder.SetActive (false);
 		optionsMenuHolder.SetActive (false);
 		creditsHolder.SetActive (false);
-		levelSelectHolder.SetActive(true);
+		classicLevelSelectHolder.SetActive(true);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+	}
+	
+	public void challegeLevelSelect() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(true);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+	}
+	
+	public void jungleSelect() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(true);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+	}
+	
+	public void volcanoSelect() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(true);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+	}
+	
+	public void skySelect() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(true);
+		spaceChallangeSelectHolder.SetActive(false);
+	}
+	
+	public void spaceSelect() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(true);
 	}
 
 	public void SetMasterVolume(float value) {
@@ -191,5 +307,13 @@ public class Menu : MonoBehaviour {
 		ScoreTextScript.seconds = 0;
 		GameUI.isGameOver = false;
 		GameUI.isPaused = false;
+	}
+
+	public void displayStars1A()
+	{
+		for (int x = 0 ; x < GameUI.stars1A; x++)
+		{
+			stars1A[x].SetActive(true);
+		}
 	}
 }

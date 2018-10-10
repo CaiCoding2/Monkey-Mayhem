@@ -18,6 +18,7 @@ public class GameUI : MonoBehaviour
 	public GameObject[] stars;
 	public static bool isPaused = false;
 	
+	public static int stars1A = 0;
 	
 	void Start ()
 	{
@@ -117,14 +118,26 @@ public class GameUI : MonoBehaviour
 		{
 			if (ScoreTextScript.countdownSeconds < 18)
 			{
+				if (stars1A < 1)
+				{
+					stars1A = 1;
+					
+				}
 				return 1;
 			}
 			else if (ScoreTextScript.countdownSeconds > 25)
 			{
+				stars1A = 3;
 				return 3;
 			}
 			else
 			{
+				if (stars1A < 2)
+				{
+					stars1A = 2;
+					
+				}
+
 				return 2;
 			}
 		}

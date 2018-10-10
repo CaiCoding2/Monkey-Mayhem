@@ -57,7 +57,7 @@ public class ScoreTextScript : MonoBehaviour
 
         if (this.CompareTag("Total"))
         {
-            total = Mathf.FloorToInt(score) + bananaAmount;
+            total = Mathf.FloorToInt(score) + (bananaAmount*5);
             totalText.text = total.ToString();
         }
         
