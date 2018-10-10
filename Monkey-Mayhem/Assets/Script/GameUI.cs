@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour
 
 	public Image fadePlane;
 	public GameObject gameOverUI;
+	public GameObject gameOverText;
 	public GameObject pauseMenuUI;
 	public GameObject challengeComppleteUI;
 	public static bool isGameOver;
@@ -37,9 +38,9 @@ public class GameUI : MonoBehaviour
 				if(Time.timeScale == 1)
 				{
 					isPaused = true;
+					pauseMenuUI.SetActive(true);
 					buttonToSelectOnPause.Select();
 					Time.timeScale = 0;
-					pauseMenuUI.SetActive(true);
 				} else if (Time.timeScale == 0)
 				{
 					isPaused = false;
@@ -52,10 +53,10 @@ public class GameUI : MonoBehaviour
 
 	void onGameOver()
 	{
-		buttonToSelectOnGameOver.Select();
-		StartCoroutine(Fade (Color.clear, Color.white,1));
-		gameOverUI.SetActive (true);
 		isGameOver = true;
+		
+		gameOverText.SetActive(true);
+		StartCoroutine(gameOverUiControl());
 	}
 
 	void onChallengeCompleted()
@@ -70,6 +71,15 @@ public class GameUI : MonoBehaviour
 			stars[x].SetActive(false);
 		}
 		
+	}
+
+	IEnumerator gameOverUiControl()
+	{
+		yield return new WaitForSeconds(2);
+		gameOverUI.SetActive(true);
+		buttonToSelectOnGameOver.Select();
+		StartCoroutine(Fade (Color.clear, Color.white,1));
+		gameOverText.SetActive(false);
 	}
 
 	IEnumerator Fade(Color from, Color to, float time) {

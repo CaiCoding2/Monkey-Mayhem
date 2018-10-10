@@ -20,6 +20,7 @@
           <e p="DebrisPhysics.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
           <e p="GameUI.cs" t="Include" />
+          <e p="Lava.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="MusicManager.cs" t="Include" />
           <e p="PlatformController.cs" t="Include" />
