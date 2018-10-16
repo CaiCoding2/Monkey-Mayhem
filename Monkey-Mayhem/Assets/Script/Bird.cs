@@ -27,7 +27,7 @@ public class Bird : MonoBehaviour {
 	                // Moving Right
 	                if (currPosition.x > minXPosition)
 	                {
-	                    currPosition.x -= 0.05f;
+	                    currPosition.x -= 0.03f;
 	                }
 	                else
 	                {
@@ -42,7 +42,7 @@ public class Bird : MonoBehaviour {
 	                // Moving Left
 	                if (currPosition.x < maxXPosition)
 	                {
-	                    currPosition.x += 0.05f;
+	                    currPosition.x += 0.03f;
 	                  
 	                }
 	                else

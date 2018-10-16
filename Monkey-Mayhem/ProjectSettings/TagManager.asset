@@ -13,6 +13,7 @@ TagManager:
   - BananaCountdown
   - TimeCountdown
   - Debris
+  - Debirs
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Player
   - Collision
   - Lava
-  - 
-  - 
+  - Pback background
+  - Pfront background
   - 
   - 
   - 

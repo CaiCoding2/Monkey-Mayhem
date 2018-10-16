@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 1030724699730588}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bc163641cb5374564b5fb38c270894dc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f87f6ef2ab8a497498c337aa8d593da, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95641742606954804}
   fallingSpeed: 5
-  rb2d: {fileID: 0}
+  rb2d: {fileID: 50045894425473596}
 --- !u!212 &212068102982498022
 SpriteRenderer:
   m_ObjectHideFlags: 1

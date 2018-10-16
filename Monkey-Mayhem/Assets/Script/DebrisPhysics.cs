@@ -35,7 +35,6 @@ public class DebrisPhysics : MonoBehaviour
         {// collider other object other than player
             isFalling = false;
             transform.Translate(0, 0, 0);
-            print("You Hit debris!");
             //rb2d.bodyType = RigidbodyType2D.Static;
         }
 
