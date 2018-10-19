@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
+using UnityScript.Steps;
 
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
@@ -57,15 +58,6 @@ public class Player : MonoBehaviour {
 
     void Update() {
 	    
-	    /*if (Input.GetAxis("Axis 11") > 0f)
-		    print( "positive x");
-	    else if (Input.GetAxis("Axis 11") < 0f)
-		    print( "negative x");
-
-	    if (Input.GetAxis("Axis 12") > 0f)
-		    print( "positive y");
-	    else if (Input.GetAxis("Axis 12") < 0f)
-		    print( "negative y");*/
    
         if (transform.position.x < -camSize)
         {
@@ -77,12 +69,17 @@ public class Player : MonoBehaviour {
             transform.position = new Vector2(-camSize, transform.position.y);
         }
 
+	    
         Vector2 input = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 	    if (Input.GetAxis("Horizontal") == 0.0f)
 	    {
 		    input = new Vector2(Input.GetAxis("Axis 11"), -Input.GetAxis("Axis 12"));
 	    }
-	    
+
+	    if (GameUI.isGameOver)
+	    {
+		    input = new Vector2(0, 0);
+	    }
 
 	    int wallDirX = (controller.collisions.left) ? -1 : 1;
 
@@ -177,7 +174,7 @@ public class Player : MonoBehaviour {
 				velocity.y = jumpVelocity;
 			}
 		}
-	    
+
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move (velocity * Time.deltaTime);
 	}
@@ -220,6 +217,7 @@ public class Player : MonoBehaviour {
 		if (other.CompareTag("Lava"))
 		{
 			AudioManager.instance.PlaySound("Lava", transform.position, 2);
+			animator.SetBool("Touched Lava", true);
 			die();
 		}
 	}
@@ -229,8 +227,8 @@ public class Player : MonoBehaviour {
 		if (OnDeath != null) {
 			OnDeath();
 		}
-
-		gameObject.SetActive(false);
+		
+		//gameObject.SetActive(false);
 	}
 	
 	void completeChallenge()
