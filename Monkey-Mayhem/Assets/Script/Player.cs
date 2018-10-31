@@ -134,6 +134,7 @@ public class Player : MonoBehaviour {
 
 	    if (controller.collisions.above && controller.collisions.below)
 	    {
+		    animator.SetBool("Squished", true);
 		    AudioManager.instance.PlaySound("Squish", transform.position, 1);
 		    die();
 	    }
@@ -211,8 +212,9 @@ public class Player : MonoBehaviour {
 
 		if (other.CompareTag("Enemy"))
 		{
-			die();
 			AudioManager.instance.PlaySound("Enemy", transform.position, 1);
+			animator.SetBool("Touched Enemy", true);
+			die();
 		}
 		if (other.CompareTag("Lava"))
 		{
@@ -228,7 +230,7 @@ public class Player : MonoBehaviour {
 			OnDeath();
 		}
 		
-		//gameObject.SetActive(false);
+		gameObject.SetActive(false);
 	}
 	
 	void completeChallenge()
