@@ -6,7 +6,7 @@ public class Bird : MonoBehaviour {
 
     float minXPosition = -7.5f;
     float maxXPosition = 7.5f;
-    int direction = 1;
+    int direction = 0;
     Vector2 currPosition;
     SpriteRenderer spriteRenderer;
 
@@ -14,6 +14,14 @@ public class Bird : MonoBehaviour {
 	void Start () {
         currPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.flipX == false)
+        {
+            direction = 1;
+        }
+        else
+        {
+            direction = -1;
+        }
 	}
 	
 	// Update is called once per frame
@@ -33,7 +41,7 @@ public class Bird : MonoBehaviour {
 	                {
 	                    // Hit left boundary, change direction
 	                    direction = 1;
-	                    spriteRenderer.flipX = false;
+                        spriteRenderer.flipX = !spriteRenderer.flipX;
 	                }
 
 	                break;
@@ -49,12 +57,10 @@ public class Bird : MonoBehaviour {
 	                {
 	                    // Hit right boundary, change direction
 	                    direction = -1;
-	                    spriteRenderer.flipX = true;
-	                    
+                        spriteRenderer.flipX = !spriteRenderer.flipX;
+                    }
 
-	                }
-
-	                break;
+                    break;
 	        }
 
 	        transform.localPosition = new Vector2(currPosition.x, currPosition.y);
