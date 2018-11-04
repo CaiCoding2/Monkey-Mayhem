@@ -10,6 +10,9 @@ public class Player : MonoBehaviour {
 
 	public float jumpHeight = 4;
 	public float timeToJumpApex = .4f;
+	public GameObject ghost;
+	public GameObject smoke;
+	public GameObject deadMonkey;
 	float accelerationTimeAirborne = .2f;
 	float accelerationTimeGrounded = .1f;
 	float moveSpeed = 6;
@@ -50,6 +53,7 @@ public class Player : MonoBehaviour {
     public Transform TopLeft;
     public Transform TopRight;
     private bool spawnDust = true;
+	
 	
 
 	
@@ -144,9 +148,13 @@ public class Player : MonoBehaviour {
 
 	    if (controller.collisions.above && controller.collisions.below)
 	    {
-		    animator.SetBool("Squished", true);
+		    ghost.transform.position = transform.position;
+		    ghost.SetActive(true);
+		    smoke.transform.position = transform.position;
+		    smoke.SetActive(true);
 		    AudioManager.instance.PlaySound("Squish", transform.position, 1);
 		    die();
+		    Destroy(smoke,.5f);
 	    }
 
         if (ScoreTextScript.bananaAmount == 10)
@@ -251,12 +259,20 @@ public class Player : MonoBehaviour {
 		{
 			AudioManager.instance.PlaySound("Enemy", transform.position, 1);
 			animator.SetBool("Touched Enemy", true);
+			ghost.transform.position = transform.position;
+			ghost.SetActive(true);
+			deadMonkey.transform.position = transform.position;
+			deadMonkey.SetActive(true);
 			die();
 		}
 		if (other.CompareTag("Lava"))
 		{
 			AudioManager.instance.PlaySound("Lava", transform.position, 2);
 			animator.SetBool("Touched Lava", true);
+			ghost.transform.position = transform.position;
+			ghost.SetActive(true);
+			deadMonkey.transform.position = transform.position;
+			deadMonkey.SetActive(true);
 			die();
 		}
 	}

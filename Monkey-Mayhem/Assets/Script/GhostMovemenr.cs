@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lava : MonoBehaviour
-{
+public class GhostMovemenr : MonoBehaviour {
 
 	private bool dirRight = true;
 	public float verticalSpeed;
 	public float horizontalSpeed;
 	int direction = 1;
+	private float originalX;
 	
-	void Start () {
+	private void Start()
+	{
+		originalX = transform.position.x;
 	}
 
 	private void Update()
@@ -29,17 +31,12 @@ public class Lava : MonoBehaviour
 				transform.Translate(Vector2.up * verticalSpeed * Time.deltaTime);
 			}
 
-			if(transform.position.x >= 1.4f) {
+			if(transform.position.x >= originalX + .4f) {
 				dirRight = false;
 			}
        
-			if(transform.position.x <= -1.4f) {
+			if(transform.position.x <= originalX - .4f) {
 				dirRight = true;
-			}
-
-			if (GameUI.isGameOver)
-			{
-				verticalSpeed = 0;
 			}
 		}
 	}

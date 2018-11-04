@@ -101,6 +101,7 @@ public class GameUI : MonoBehaviour
 		ScoreTextScript.score = 0;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		Time.timeScale = 1;
+		
 	}
 
 	public void toMenu()
