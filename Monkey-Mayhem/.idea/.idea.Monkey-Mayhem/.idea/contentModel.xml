@@ -18,6 +18,7 @@
           <e p="Bird.cs" t="Include" />
           <e p="Controller2D.cs" t="Include" />
           <e p="DebrisPhysics.cs" t="Include" />
+          <e p="Destroy.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
           <e p="GameUI.cs" t="Include" />
           <e p="Lava.cs" t="Include" />
