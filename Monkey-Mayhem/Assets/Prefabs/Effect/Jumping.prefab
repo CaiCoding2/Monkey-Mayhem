@@ -53,8 +53,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4308984191110330}
+  - component: {fileID: 114533966236940728}
   m_Layer: 0
-  m_Name: LandingDust
+  m_Name: Jumping
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +102,17 @@ Transform:
   m_Father: {fileID: 4308984191110330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114533966236940728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1807517374438528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa153f0da6139d44a4088cf5900e966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198273025544362956
 ParticleSystem:
   m_ObjectHideFlags: 1

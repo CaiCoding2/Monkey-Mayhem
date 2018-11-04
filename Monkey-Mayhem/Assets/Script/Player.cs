@@ -38,8 +38,18 @@ public class Player : MonoBehaviour {
 	
 	public event System.Action OnDeath;
 	public event System.Action OnChallengeCompletion;
-	
 
+    //Effect
+    public GameObject JumpingDust;
+    public GameObject LeftWallDust;
+    public GameObject RightWallDust;
+    public GameObject SliddingDust;
+    public Transform ButtomCenter;
+    public Transform ButtomLeft;
+    public Transform ButtomRight;
+    public Transform TopLeft;
+    public Transform TopRight;
+    private bool spawnDust = true;
 	
 
 	
@@ -148,39 +158,66 @@ public class Player : MonoBehaviour {
 		    AudioManager.instance.PlaySound("Enemy", transform.position, 1);
 		    die();
 	    }
-	    
+
+        if (wallSliding)
+        {
+            if (wallDirX == 1)
+            {
+                Instantiate(SliddingDust, TopRight.position, Quaternion.identity);
+            }
+            else if (wallDirX == -1)
+            {
+                Instantiate(SliddingDust, TopLeft.position, Quaternion.identity);
+            }
+        }
 	    if (Input.GetKeyDown (KeyCode.Space) 
 	        || Input.GetKeyDown(KeyCode.Joystick1Button0) 
 		    || Input.GetKeyDown(KeyCode.Joystick1Button1)) 
 	    {
 			if (wallSliding) {	
 				if (wallDirX == input.x) {
-					velocity.x = -wallDirX * wallJumpClimb.x * 1.5f;
+                    //Jump up
+                    velocity.x = -wallDirX * wallJumpClimb.x * 1.5f;
 					velocity.y = wallJumpClimb.y * 1.2f;
 					AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				}
 				else if (input.x == 0) {
-					velocity.x = -wallDirX * wallJumpOff.x;
+                    
+                    //jump with noinput
+                    velocity.x = -wallDirX * wallJumpOff.x;
 					velocity.y = wallJumpOff.y;
 					AudioManager.instance.PlaySound("Jump", transform.position, 1);
-				}
+          
+                }
 				else {
-					velocity.x = -wallDirX * wallLeap.x;
+                    //leap
+                    print("check 3");
+                    velocity.x = -wallDirX * wallLeap.x;
 					velocity.y = wallLeap.y;
 					AudioManager.instance.PlaySound("Jump", transform.position, 1);
-				}
-			}
+                }
+                if(wallDirX == 1)
+                    {
+                    Instantiate(RightWallDust, ButtomRight.position, Quaternion.identity);
+                }else if (wallDirX == -1)
+                {
+                    Instantiate(LeftWallDust, ButtomLeft.position, Quaternion.identity);
+                }
+            }
 			if (controller.collisions.below) {
 				AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				velocity.y = jumpVelocity;
-			}
+                //dust on jumping
+                Instantiate(JumpingDust, ButtomCenter.position, Quaternion.identity);
+            }
 		}
-
+    
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move (velocity * Time.deltaTime);
 	}
 
-	void runningSound()
+
+    void runningSound()
 	{
 		if ((controller.collisions.below && (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f || Mathf.Abs(velocity.x) > 0.4)
 		                                 && GameUI.isGameOver == false))
