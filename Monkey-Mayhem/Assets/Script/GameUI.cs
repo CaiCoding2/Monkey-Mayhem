@@ -66,7 +66,7 @@ public class GameUI : MonoBehaviour
 	void onLevelCompleted()
 	{	
 		AudioManager.instance.PlaySound("Victory", new Vector2 (0,0), 1);
-		buttonToSelectOnLevelComplete.Select();
+		//buttonToSelectOnLevelComplete.Select();
 		StartCoroutine(CompelteUiControl());
 		completeText.SetActive(true);
 		isGameOver = true;
@@ -103,7 +103,7 @@ public class GameUI : MonoBehaviour
 	{
 		yield return new WaitForSeconds(2);
 		completeUI.SetActive(true);
-		buttonToSelectOnGameOver.Select();
+		buttonToSelectOnLevelComplete.Select();
 		StartCoroutine(Fade (Color.clear, Color.white,1));
 		completeText.SetActive(false);
 	}
