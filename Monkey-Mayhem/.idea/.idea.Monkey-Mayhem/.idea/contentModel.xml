@@ -17,6 +17,7 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="Bird.cs" t="Include" />
           <e p="Controller2D.cs" t="Include" />
+          <e p="Credits.cs" t="Include" />
           <e p="DeadMonkeyMovement.cs" t="Include" />
           <e p="DebrisPhysics.cs" t="Include" />
           <e p="Destroy.cs" t="Include" />
