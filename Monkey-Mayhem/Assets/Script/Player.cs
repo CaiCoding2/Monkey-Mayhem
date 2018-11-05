@@ -56,9 +56,11 @@ public class Player : MonoBehaviour {
     public Transform TopLeft;
     public Transform TopRight;
     private bool spawnDust = true;
-	
-	
 
+    //collection effect
+    public GameObject BananaSpread;
+    public Transform UppperMid;
+	
 	
 	void Start() {
         
@@ -295,6 +297,7 @@ public class Player : MonoBehaviour {
 		{
 			AudioManager.instance.PlaySound("Banana", transform.position, 1);
 			ScoreTextScript.bananaAmount++;
+            Instantiate(BananaSpread, UppperMid.position, Quaternion.identity);
 			Destroy(other.gameObject);
 			
 		}

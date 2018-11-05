@@ -3924,6 +3924,17 @@ Prefab:
       value: 
       objectReference: {fileID: 1446636764957636, guid: 41916055737e6c34593045cd7a2c2969,
         type: 2}
+    - target: {fileID: 114427862982308824, guid: 98ec6f71aee6c8642966443285c1e2ed,
+        type: 2}
+      propertyPath: UppperMid
+      value: 
+      objectReference: {fileID: 2142350612}
+    - target: {fileID: 114427862982308824, guid: 98ec6f71aee6c8642966443285c1e2ed,
+        type: 2}
+      propertyPath: BananaSpread
+      value: 
+      objectReference: {fileID: 1746461107200126, guid: 9b1e48075a60b4640a6f3ec4308b5271,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
   m_IsPrefabAsset: 0
@@ -4979,3 +4990,8 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2052151493}
   m_CullTransparentMesh: 0
+--- !u!4 &2142350612 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4773714106230278, guid: 98ec6f71aee6c8642966443285c1e2ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1519629463}
