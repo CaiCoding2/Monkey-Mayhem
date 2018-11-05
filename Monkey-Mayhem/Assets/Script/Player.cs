@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
+using UnityEngine.SceneManagement;
 using UnityScript.Steps;
 
 [RequireComponent (typeof (Controller2D))]
@@ -108,12 +109,39 @@ public class Player : MonoBehaviour {
 		animator.SetFloat("Going Up", velocity.y);
 		animator.SetBool("Touching Ground", controller.collisions.below);
 
-	    if (transform.position.y + 3.72 > ScoreTextScript.score)
+	    if (SceneManager.GetActiveScene().name == "Level 1")
 	    {
-		    ScoreTextScript.score = transform.position.y + 3.72f;
+		    if (transform.position.y + 3.72 > ScoreTextScript.score)
+		    {
+			    ScoreTextScript.score = transform.position.y + 3.72f;
+		    }
+	    }
+	    
+	    if (SceneManager.GetActiveScene().name == "Level 2")
+	    {
+		    if (transform.position.y - 11.48 > ScoreTextScript.score)
+		    {
+			    ScoreTextScript.score = transform.position.y - 11.48f;
+		    }
+	    }
+	    
+	    if (SceneManager.GetActiveScene().name == "Level 3")
+	    {
+		    if (transform.position.y - 38 > ScoreTextScript.score)
+		    {
+			    ScoreTextScript.score = transform.position.y - 38f;
+		    }
+	    }
+	    
+	    if (SceneManager.GetActiveScene().name == "Level 4")
+	    {
+		    if (transform.position.y - 71 > ScoreTextScript.score)
+		    {
+			    ScoreTextScript.score = transform.position.y - 71f;
+		    }
 	    }
 
-        float targetVelocityX = input.x * moveSpeed;
+	    float targetVelocityX = input.x * moveSpeed;
 		velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
 
 		animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
