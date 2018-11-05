@@ -18,6 +18,7 @@ public class GameUI : MonoBehaviour
 	public Button buttonToSelectOnGameOver;
 	public Button buttonToSelectOnPause;
 	public Button buttonToSelectOnChallengeComplete;
+	public Button buttonToSelectOnLevelComplete;
 	public GameObject[] stars;
 	public static bool isPaused = false;
 	
@@ -64,9 +65,14 @@ public class GameUI : MonoBehaviour
 	void onLevelCompleted()
 	{	
 		AudioManager.instance.PlaySound("Victory", new Vector2 (0,0), 1);
-		isGameOver = true;
-		completeText.SetActive(true);
+		buttonToSelectOnLevelComplete.Select();
 		StartCoroutine(CompelteUiControl());
+		completeText.SetActive(true);
+		isGameOver = true;
+		for (int x = 0; x < (3 - getStars()) ; x++)
+		{
+			stars[x].SetActive(false);
+		}
 	}
 
 	void onChallengeCompleted()
@@ -144,6 +150,35 @@ public class GameUI : MonoBehaviour
 
 	private int getStars()
 	{
+		
+		if (SceneManager.GetActiveScene().name == "Level 1")
+		{
+			if (ScoreTextScript.seconds > 20)
+			{
+				if (stars1A < 1)
+				{
+					stars1A = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.seconds < 16)
+			{
+				stars1A = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars1A < 2)
+				{
+					stars1A = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
 		if (SceneManager.GetActiveScene().name == "Level 1 A")
 		{
 			if (ScoreTextScript.countdownSeconds < 18)
