@@ -46,6 +46,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1312710459993178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4144673810167676}
+  m_Layer: 9
+  m_Name: Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1476750154049660
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4111008237964284}
   m_Layer: 9
-  m_Name: Right
+  m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -82,9 +97,10 @@ Transform:
   m_GameObject: {fileID: 1030724699730588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.46, y: 0.94, z: -0.063995466}
-  m_LocalScale: {x: 4, y: 4, z: 4.775}
+  m_LocalScale: {x: 7, y: 7, z: 4.775}
   m_Children:
   - {fileID: 4005848790544022}
+  - {fileID: 4144673810167676}
   - {fileID: 4111008237964284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,6 +111,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476750154049660}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.042, y: -0.31499997, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4024282400304322}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4144673810167676
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312710459993178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.262, y: -0.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -179,6 +208,8 @@ MonoBehaviour:
   animator: {fileID: 95641742606954804}
   fallingSpeed: 5
   rb2d: {fileID: 50045894425473596}
+  Dust: {fileID: 1303219838139294, guid: c2a1076ecb71b0f44a821c1985178505, type: 2}
+  ButtomCenter: {fileID: 4111008237964284}
 --- !u!212 &212068102982498022
 SpriteRenderer:
   m_ObjectHideFlags: 1
