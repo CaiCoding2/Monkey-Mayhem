@@ -21,6 +21,7 @@ public class Menu : MonoBehaviour {
 	public Slider[] volumeSliders;
 	
 	public GameObject[] stars1A;
+	public GameObject[] stars1;
 
 	void Start()
 	{
@@ -205,6 +206,7 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		displayStars1();
 	}
 	
 	public void challegeLevelSelect() {
@@ -316,4 +318,13 @@ public class Menu : MonoBehaviour {
 			stars1A[x].SetActive(true);
 		}
 	}
+
+	public void displayStars1()
+	{
+		for (int x = 0 ; x < GameUI.stars1; x++)
+		{
+			stars1[x].SetActive(true);
+		}
+	}
+	
 }

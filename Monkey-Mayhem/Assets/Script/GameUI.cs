@@ -21,7 +21,8 @@ public class GameUI : MonoBehaviour
 	public Button buttonToSelectOnLevelComplete;
 	public GameObject[] stars;
 	public static bool isPaused = false;
-	
+
+	public static int stars1 = 0;
 	public static int stars1A = 0;
 	
 	void Start ()
@@ -153,25 +154,25 @@ public class GameUI : MonoBehaviour
 		
 		if (SceneManager.GetActiveScene().name == "Level 1")
 		{
-			if (ScoreTextScript.seconds > 20)
+			if (ScoreTextScript.seconds > 15)
 			{
 				if (stars1A < 1)
 				{
-					stars1A = 1;
+					stars1 = 1;
 					
 				}
 				return 1;
 			}
-			else if (ScoreTextScript.seconds < 16)
+			else if (ScoreTextScript.seconds < 10)
 			{
-				stars1A = 3;
+				stars1 = 3;
 				return 3;
 			}
 			else
 			{
 				if (stars1A < 2)
 				{
-					stars1A = 2;
+					stars1 = 2;
 					
 				}
 
