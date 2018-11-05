@@ -44,6 +44,8 @@ public class Player : MonoBehaviour {
 
     //Effect
     public GameObject JumpingDust;
+    public GameObject LandingDust;
+    public GameObject TrailDust;
     public GameObject LeftWallDust;
     public GameObject RightWallDust;
     public GameObject SliddingDust;
@@ -199,7 +201,6 @@ public class Player : MonoBehaviour {
                 }
 				else {
                     //leap
-                    print("check 3");
                     velocity.x = -wallDirX * wallLeap.x;
 					velocity.y = wallLeap.y;
 					AudioManager.instance.PlaySound("Jump", transform.position, 1);
@@ -219,8 +220,23 @@ public class Player : MonoBehaviour {
                 Instantiate(JumpingDust, ButtomCenter.position, Quaternion.identity);
             }
 		}
-    
-		velocity.y += gravity * Time.deltaTime;
+        //Walking Trail Effect 
+        if (controller.collisions.below && input.x != 0)
+        {
+            Instantiate(TrailDust, ButtomCenter.position, Quaternion.identity);
+        }
+        //Landing Effect 
+        if (!controller.collisions.below) { spawnDust = true; }
+        if (controller.collisions.below)
+        {
+            if (spawnDust == true)
+            {
+                Instantiate(LandingDust, ButtomCenter.position, Quaternion.identity);
+                spawnDust = false;
+            }
+        }
+
+        velocity.y += gravity * Time.deltaTime;
 		controller.Move (velocity * Time.deltaTime);
 	}
 
