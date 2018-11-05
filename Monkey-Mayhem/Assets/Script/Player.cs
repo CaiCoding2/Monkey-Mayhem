@@ -42,6 +42,7 @@ public class Player : MonoBehaviour {
 	
 	public event System.Action OnDeath;
 	public event System.Action OnChallengeCompletion;
+	public event System.Action OnLevelCompletion;
 
     //Effect
     public GameObject JumpingDust;
@@ -189,6 +190,11 @@ public class Player : MonoBehaviour {
 		    Destroy(smoke,.5f);
 	    }
 
+	    if (ScoreTextScript.score > 15)
+	    {
+		    completeLevel();
+	    }
+
         if (ScoreTextScript.bananaAmount == 10)
 	    {
 		    completeChallenge();
@@ -217,7 +223,7 @@ public class Player : MonoBehaviour {
 			if (wallSliding) {	
 				if (wallDirX == input.x) {
                     //Jump up
-                    velocity.x = -wallDirX * wallJumpClimb.x * 1.5f;
+                    velocity.x = -wallDirX * wallJumpClimb.x * 1f;
 					velocity.y = wallJumpClimb.y * 1.2f;
 					AudioManager.instance.PlaySound("Jump", transform.position, 1);
 				}
@@ -339,6 +345,15 @@ public class Player : MonoBehaviour {
 			OnChallengeCompletion();
 		}
 
+		gameObject.SetActive(false);
+	}
+
+	void completeLevel()
+	{
+		if (OnLevelCompletion != null) {
+			OnLevelCompletion();
+		}
+		
 		gameObject.SetActive(false);
 	}
 }

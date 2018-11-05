@@ -12,6 +12,8 @@ public class GameUI : MonoBehaviour
 	public GameObject gameOverText;
 	public GameObject pauseMenuUI;
 	public GameObject challengeComppleteUI;
+	public GameObject completeUI;
+    public GameObject completeText;
 	public static bool isGameOver;
 	public Button buttonToSelectOnGameOver;
 	public Button buttonToSelectOnPause;
@@ -27,11 +29,12 @@ public class GameUI : MonoBehaviour
 		
 		FindObjectOfType<Player>().OnDeath += onGameOver;
 		FindObjectOfType<Player>().OnChallengeCompletion += onChallengeCompleted;
+		FindObjectOfType<Player>().OnLevelCompletion += onLevelCompleted;
 
 	}
 	
 	void Update () {
-
+		
 		if (!gameOverUI.active){
 			if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button9))
 			{
@@ -54,9 +57,16 @@ public class GameUI : MonoBehaviour
 	void onGameOver()
 	{
 		isGameOver = true;
-		
 		gameOverText.SetActive(true);
 		StartCoroutine(gameOverUiControl());
+	}
+
+	void onLevelCompleted()
+	{	
+		AudioManager.instance.PlaySound("Victory", new Vector2 (0,0), 1);
+		isGameOver = true;
+		completeText.SetActive(true);
+		StartCoroutine(CompelteUiControl());
 	}
 
 	void onChallengeCompleted()
@@ -80,6 +90,15 @@ public class GameUI : MonoBehaviour
 		buttonToSelectOnGameOver.Select();
 		StartCoroutine(Fade (Color.clear, Color.white,1));
 		gameOverText.SetActive(false);
+	}
+	
+	IEnumerator CompelteUiControl()
+	{
+		yield return new WaitForSeconds(2);
+		completeUI.SetActive(true);
+		buttonToSelectOnGameOver.Select();
+		StartCoroutine(Fade (Color.clear, Color.white,1));
+		completeText.SetActive(false);
 	}
 
 	IEnumerator Fade(Color from, Color to, float time) {
