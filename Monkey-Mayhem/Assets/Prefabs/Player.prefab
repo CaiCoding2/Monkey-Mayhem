@@ -46,6 +46,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1370800902705020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4773714106230278}
+  m_Layer: 0
+  m_Name: UpperMid
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1623356090574848
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,8 +188,22 @@ Transform:
   - {fileID: 4603166276468206}
   - {fileID: 4447008746983394}
   - {fileID: 4315991627282094}
+  - {fileID: 4773714106230278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4773714106230278
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370800902705020}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 0.21, z: 0}
+  m_LocalScale: {x: 1.6666667, y: 1.6666667, z: 1.428}
+  m_Children: []
+  m_Father: {fileID: 4611298831298894}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4930188501291598
 Transform:
@@ -245,6 +274,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 4.5
   timeToJumpApex: 0.5
+  ghost: {fileID: 0}
+  smoke: {fileID: 0}
+  deadMonkey: {fileID: 0}
   wallJumpClimb: {x: 7.5, y: 16}
   wallJumpOff: {x: 8.5, y: 7}
   wallLeap: {x: 18, y: 17}
@@ -255,6 +287,9 @@ MonoBehaviour:
   animator: {fileID: 95959481776099546}
   JumpingDust: {fileID: 1807517374438528, guid: fe64eaf4ef9813940926490b60ab353e,
     type: 2}
+  LandingDust: {fileID: 1877697350141410, guid: 6425403a2f619544a95ca9def479760f,
+    type: 2}
+  TrailDust: {fileID: 1446636764957636, guid: 41916055737e6c34593045cd7a2c2969, type: 2}
   LeftWallDust: {fileID: 1809679996282932, guid: c492837ebd9fa1146b44267696966c79,
     type: 2}
   RightWallDust: {fileID: 1354346147278422, guid: fdde752a7d0187f40a25eb6ef9577dc2,
@@ -266,6 +301,9 @@ MonoBehaviour:
   ButtomRight: {fileID: 4603166276468206}
   TopLeft: {fileID: 4447008746983394}
   TopRight: {fileID: 4315991627282094}
+  BananaSpread: {fileID: 1746461107200126, guid: 9b1e48075a60b4640a6f3ec4308b5271,
+    type: 2}
+  LowMid: {fileID: 4773714106230278}
 --- !u!114 &114812657319281526
 MonoBehaviour:
   m_ObjectHideFlags: 1
