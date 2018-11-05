@@ -1198,6 +1198,7 @@ GameObject:
   - component: {fileID: 188701121}
   - component: {fileID: 188701123}
   - component: {fileID: 188701122}
+  - component: {fileID: 188701124}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -1220,7 +1221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.89, y: -0.59}
+  m_AnchoredPosition: {x: 4.49, y: -6.91}
   m_SizeDelta: {x: 1080.891, y: 783.131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &188701122
@@ -1267,6 +1268,11 @@ MonoBehaviour:
     Guillermo de los Cobos
 
 
+    Dominick Say
+
+    Monkey Asset
+
+
     Super Brutal Assets
 
     Jungle Assets
@@ -1274,11 +1280,44 @@ MonoBehaviour:
 
     Jesse M Jungle Pack
 
+    Jungle Assets
+
+
     Universal Sound FX
+
+    Sound Assets
+
 
     Ultimate Game Music Collection
 
-    Jeremy''s Cousin'
+    Music Assets
+
+
+    TESTERS
+
+    Bharka Anandani
+
+    RongJie Cai
+
+    Jeremy Chheav
+
+    Guillermo de los Cobos
+
+    Arun Kuchibotla
+
+    Mac Levy
+
+    Max Goldschein
+
+    Andrew Felton
+
+    Rachel Stern
+
+    Charlie Goldstein
+
+    Ben Goldstein
+
+    Jacob McDonald'
 --- !u!222 &188701123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1286,6 +1325,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 188701120}
   m_CullTransparentMesh: 0
+--- !u!114 &188701124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 188701120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b57642878a4e34b2aac5e7ff2946c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 0.7
 --- !u!1 &199962221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,7 +5181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &992778451
 Transform:
   m_ObjectHideFlags: 0
@@ -5557,12 +5608,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2122942618}
-        m_MethodName: 
+      - m_Target: {fileID: 2122942619}
+        m_MethodName: Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8161,7 +8212,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e7b52846a822c42cf889c05f3a315eb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11154,7 +11205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1978760984
 Transform:
   m_ObjectHideFlags: 0

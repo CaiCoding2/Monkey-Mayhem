@@ -4013,6 +4013,18 @@ Prefab:
       propertyPath: deadMonkey
       value: 
       objectReference: {fileID: 2827079}
+    - target: {fileID: 114427862982308824, guid: 98ec6f71aee6c8642966443285c1e2ed,
+        type: 2}
+      propertyPath: LandingDust
+      value: 
+      objectReference: {fileID: 1877697350141410, guid: 6425403a2f619544a95ca9def479760f,
+        type: 2}
+    - target: {fileID: 114427862982308824, guid: 98ec6f71aee6c8642966443285c1e2ed,
+        type: 2}
+      propertyPath: TrailDust
+      value: 
+      objectReference: {fileID: 1446636764957636, guid: 41916055737e6c34593045cd7a2c2969,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
   m_IsPrefabAsset: 0
