@@ -10,6 +10,9 @@ public class DebrisPhysics : MonoBehaviour
     bool isFalling = true;
     public Rigidbody2D rb2d;
 
+    public GameObject Dust;
+    public Transform ButtomCenter;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -35,6 +38,7 @@ public class DebrisPhysics : MonoBehaviour
         {// collider other object other than player
             isFalling = false;
             transform.Translate(0, 0, 0);
+            Instantiate(Dust, ButtomCenter.position, Quaternion.identity);
             //rb2d.bodyType = RigidbodyType2D.Static;
         }
 
