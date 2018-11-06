@@ -26,6 +26,7 @@ public class GameUI : MonoBehaviour
 	public static int stars2 = 0;
 	public static int stars3 = 0;
 	public static int stars4 = 0;
+	public static int starsS = 0;
 	public static int stars1A = 0;
 	public static int stars1B = 0;
 	public static int stars1C = 0;
@@ -263,6 +264,34 @@ public class GameUI : MonoBehaviour
 				if (stars4 < 2)
 				{
 					stars4 = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level S")
+		{
+			if (ScoreTextScript.seconds > 15)
+			{
+				if (starsS < 1)
+				{
+					starsS = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.seconds < 10)
+			{
+				starsS = 3;
+				return 3;
+			}
+			else
+			{
+				if (starsS < 2)
+				{
+					starsS = 2;
 					
 				}
 

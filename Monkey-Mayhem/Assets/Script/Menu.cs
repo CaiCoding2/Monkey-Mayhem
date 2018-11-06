@@ -27,6 +27,7 @@ public class Menu : MonoBehaviour {
 	public GameObject[] stars2;
 	public GameObject[] stars3;
 	public GameObject[] stars4;
+	public GameObject[] starsS;
 	public GameObject[] stars1A;
 	public GameObject[] stars1B;
 	public GameObject[] stars1C;
@@ -405,6 +406,14 @@ public class Menu : MonoBehaviour {
 		for (int x = 0 ; x < GameUI.stars4; x++)
 		{
 			stars4[x].SetActive(true);
+		}
+	}
+	
+	public void displayStarsS()
+	{
+		for (int x = 0 ; x < GameUI.starsS; x++)
+		{
+			starsS[x].SetActive(true);
 		}
 	}
 	
