@@ -47,6 +47,8 @@ public class GameUI : MonoBehaviour
 	public static int stars4C = 0;
 	public static int stars4D = 0;
 	public static int stars4S = 0;
+
+    public UserInput userInput;
 	
 	void Start ()
 	{
@@ -152,7 +154,7 @@ public class GameUI : MonoBehaviour
 		ScoreTextScript.score = 0;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		Time.timeScale = 1;
-		
+        userInput.nameSubmitHolder.SetActive(true);
 	}
 
 	public void toMenu()
