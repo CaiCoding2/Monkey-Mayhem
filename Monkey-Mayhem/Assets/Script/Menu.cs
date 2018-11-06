@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -17,6 +18,8 @@ public class Menu : MonoBehaviour {
 	public GameObject volcanoChallangeSelectHolder;
 	public GameObject skyChallangeSelectHolder;
 	public GameObject spaceChallangeSelectHolder;
+	public GameObject tutorialHolder;
+	public GameObject highScoresHolder;
 
 	public Slider[] volumeSliders;
 	
@@ -153,6 +156,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 		
 	}
 
@@ -167,6 +172,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void PlaynMenu() {
@@ -180,6 +187,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void Credits() {
@@ -193,6 +202,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void classicLevelSelect() {
@@ -206,6 +217,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 		displayStars1();
 	}
 	
@@ -220,6 +233,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void jungleSelect() {
@@ -233,6 +248,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void volcanoSelect() {
@@ -246,6 +263,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(true);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void skySelect() {
@@ -259,6 +278,8 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(true);
 		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
 	}
 	
 	public void spaceSelect() {
@@ -272,6 +293,38 @@ public class Menu : MonoBehaviour {
 		volcanoChallangeSelectHolder.SetActive(false);
 		skyChallangeSelectHolder.SetActive(false);
 		spaceChallangeSelectHolder.SetActive(true);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(false);
+	}
+	
+	public void tutorial() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(true);
+		highScoresHolder.SetActive(false);
+	}
+	
+	public void highScores() {
+		mainMenuHolder.SetActive (false);
+		optionsMenuHolder.SetActive (false);
+		creditsHolder.SetActive (false);
+		classicLevelSelectHolder.SetActive(false);
+		playMenuHolder.SetActive(false);
+		challengeLevelSelectHolder.SetActive(false);
+		jungleChallangeSelectHolder.SetActive(false);
+		volcanoChallangeSelectHolder.SetActive(false);
+		skyChallangeSelectHolder.SetActive(false);
+		spaceChallangeSelectHolder.SetActive(false);
+		tutorialHolder.SetActive(false);
+		highScoresHolder.SetActive(true);
 	}
 
 	public void SetMasterVolume(float value) {
@@ -293,6 +346,7 @@ public class Menu : MonoBehaviour {
 
 	public void selectNextButton(Button button)
 	{
+		print("sdasd");
 		button.Select();
 	}
 

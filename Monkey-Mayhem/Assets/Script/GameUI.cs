@@ -24,6 +24,9 @@ public class GameUI : MonoBehaviour
 
 	public static int stars1 = 0;
 	public static int stars1A = 0;
+	public static int stars1B = 0;
+	public static int stars1C = 0;
+	public static int stars1D = 0;
 	
 	void Start ()
 	{
@@ -191,7 +194,7 @@ public class GameUI : MonoBehaviour
 				}
 				return 1;
 			}
-			else if (ScoreTextScript.countdownSeconds > 25)
+			else if (ScoreTextScript.countdownSeconds > 22)
 			{
 				stars1A = 3;
 				return 3;
@@ -210,240 +213,28 @@ public class GameUI : MonoBehaviour
 
 		if (SceneManager.GetActiveScene().name == "Level 1 B")
 		{
-			if (ScoreTextScript.countdownSeconds < 22)
+			if (ScoreTextScript.countdownSeconds < 20)
 			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 1 C")
-		{
-			if (ScoreTextScript.countdownSeconds < 15)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 23)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 1 D")
-		{
-			if (ScoreTextScript.countdownSeconds < 18)
-			{
+				if (stars1B < 1)
+				{
+					stars1B = 1;
+					
+				}
 				return 1;
 			}
 			else if (ScoreTextScript.countdownSeconds > 26)
 			{
+				stars1B = 3;
 				return 3;
 			}
 			else
 			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 2 A")
-		{
-			if (ScoreTextScript.countdownSeconds < 15)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 22)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 2 B")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 2 C")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 2 D")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 3 A")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 3 B")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 3 C")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 3 D")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 4 A")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 4 B")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 4 C")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
-				return 2;
-			}
-		}
-		
-		if (SceneManager.GetActiveScene().name == "Level 4 D")
-		{
-			if (ScoreTextScript.countdownSeconds < 25)
-			{
-				return 1;
-			}
-			else if (ScoreTextScript.countdownSeconds > 28)
-			{
-				return 3;
-			}
-			else
-			{
+				if (stars1B < 2)
+				{
+					stars1B = 2;
+					
+				}
+
 				return 2;
 			}
 		}
