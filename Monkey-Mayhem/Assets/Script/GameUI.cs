@@ -23,6 +23,9 @@ public class GameUI : MonoBehaviour
 	public static bool isPaused = false;
 
 	public static int stars1 = 0;
+	public static int stars2 = 0;
+	public static int stars3 = 0;
+	public static int stars4 = 0;
 	public static int stars1A = 0;
 	public static int stars1B = 0;
 	public static int stars1C = 0;
@@ -159,7 +162,7 @@ public class GameUI : MonoBehaviour
 		{
 			if (ScoreTextScript.seconds > 15)
 			{
-				if (stars1A < 1)
+				if (stars1 < 1)
 				{
 					stars1 = 1;
 					
@@ -173,9 +176,93 @@ public class GameUI : MonoBehaviour
 			}
 			else
 			{
-				if (stars1A < 2)
+				if (stars1 < 2)
 				{
 					stars1 = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 2")
+		{
+			if (ScoreTextScript.seconds > 15)
+			{
+				if (stars2 < 1)
+				{
+					stars2 = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.seconds < 10)
+			{
+				stars2 = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars2 < 2)
+				{
+					stars2 = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 3")
+		{
+			if (ScoreTextScript.seconds > 15)
+			{
+				if (stars3 < 1)
+				{
+					stars3 = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.seconds < 10)
+			{
+				stars3 = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars3 < 2)
+				{
+					stars3 = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 4")
+		{
+			if (ScoreTextScript.seconds > 15)
+			{
+				if (stars4 < 1)
+				{
+					stars4 = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.seconds < 10)
+			{
+				stars4 = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars4 < 2)
+				{
+					stars4 = 2;
 					
 				}
 

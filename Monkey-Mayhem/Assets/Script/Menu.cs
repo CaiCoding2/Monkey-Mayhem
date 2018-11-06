@@ -23,8 +23,16 @@ public class Menu : MonoBehaviour {
 
 	public Slider[] volumeSliders;
 	
-	public GameObject[] stars1A;
 	public GameObject[] stars1;
+	public GameObject[] stars2;
+	public GameObject[] stars3;
+	public GameObject[] stars4;
+	public GameObject[] stars1A;
+	public GameObject[] stars1B;
+	public GameObject[] stars1C;
+	public GameObject[] stars1D;
+	public GameObject[] stars1S;
+	
 
 	void Start()
 	{
@@ -220,6 +228,9 @@ public class Menu : MonoBehaviour {
 		tutorialHolder.SetActive(false);
 		highScoresHolder.SetActive(false);
 		displayStars1();
+		displayStars2();
+		displayStars3();
+		displayStars4();
 	}
 	
 	public void challegeLevelSelect() {
@@ -365,19 +376,43 @@ public class Menu : MonoBehaviour {
 		GameUI.isPaused = false;
 	}
 
-	public void displayStars1A()
-	{
-		for (int x = 0 ; x < GameUI.stars1A; x++)
-		{
-			stars1A[x].SetActive(true);
-		}
-	}
-
 	public void displayStars1()
 	{
 		for (int x = 0 ; x < GameUI.stars1; x++)
 		{
 			stars1[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars2()
+	{
+		for (int x = 0 ; x < GameUI.stars2; x++)
+		{
+			stars2[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars3()
+	{
+		for (int x = 0 ; x < GameUI.stars3; x++)
+		{
+			stars3[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars4()
+	{
+		for (int x = 0 ; x < GameUI.stars4; x++)
+		{
+			stars4[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars1A()
+	{
+		for (int x = 0 ; x < GameUI.stars1A; x++)
+		{
+			stars1A[x].SetActive(true);
 		}
 	}
 	
