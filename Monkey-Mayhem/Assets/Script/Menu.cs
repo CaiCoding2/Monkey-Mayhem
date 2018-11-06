@@ -262,6 +262,8 @@ public class Menu : MonoBehaviour {
 		spaceChallangeSelectHolder.SetActive(false);
 		tutorialHolder.SetActive(false);
 		highScoresHolder.SetActive(false);
+		displayStars1A();
+		displayStars1B();
 	}
 	
 	public void volcanoSelect() {
@@ -358,7 +360,6 @@ public class Menu : MonoBehaviour {
 
 	public void selectNextButton(Button button)
 	{
-		print("sdasd");
 		button.Select();
 	}
 
@@ -425,4 +426,35 @@ public class Menu : MonoBehaviour {
 		}
 	}
 	
+	public void displayStars1B()
+	{
+		for (int x = 0 ; x < GameUI.stars1B; x++)
+		{
+			stars1B[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars1C()
+	{
+		for (int x = 0 ; x < GameUI.stars1C; x++)
+		{
+			stars1C[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars1D()
+	{
+		for (int x = 0 ; x < GameUI.stars1D; x++)
+		{
+			stars1D[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars1S()
+	{
+		for (int x = 0 ; x < GameUI.stars1S; x++)
+		{
+			stars1S[x].SetActive(true);
+		}
+	}
 }

@@ -31,6 +31,7 @@ public class GameUI : MonoBehaviour
 	public static int stars1B = 0;
 	public static int stars1C = 0;
 	public static int stars1D = 0;
+	public static int stars1S = 0;
 	
 	void Start ()
 	{
