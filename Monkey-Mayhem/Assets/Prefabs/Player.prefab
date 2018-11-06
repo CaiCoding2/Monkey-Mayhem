@@ -46,21 +46,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1370800902705020
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4773714106230278}
-  m_Layer: 0
-  m_Name: UpperMid
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1623356090574848
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,22 +173,8 @@ Transform:
   - {fileID: 4603166276468206}
   - {fileID: 4447008746983394}
   - {fileID: 4315991627282094}
-  - {fileID: 4773714106230278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4773714106230278
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1370800902705020}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.21, z: 0}
-  m_LocalScale: {x: 1.6666667, y: 1.6666667, z: 1.428}
-  m_Children: []
-  m_Father: {fileID: 4611298831298894}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4930188501291598
 Transform:
@@ -274,10 +245,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 4.5
   timeToJumpApex: 0.5
-  ghost: {fileID: 1762423142447396, guid: fc937d0527deb416fa8fc81512dd1613, type: 2}
-  smoke: {fileID: 1047755360750644, guid: 9d806c7d177684d219edc0df638a4961, type: 2}
-  deadMonkey: {fileID: 1730944840392152, guid: d5be53aa24d5b456ea1e662df28b0f1c, type: 2}
-  burnMonkey: {fileID: 1037088911656260, guid: af9b3d3060b554bc29ce9407deeb8c9f, type: 2}
+  ghost: {fileID: 0}
+  smoke: {fileID: 0}
+  deadMonkey: {fileID: 0}
+  burnMonkey: {fileID: 0}
   wallJumpClimb: {x: 7.5, y: 16}
   wallJumpOff: {x: 8.5, y: 7}
   wallLeap: {x: 18, y: 17}
@@ -304,7 +275,6 @@ MonoBehaviour:
   TopRight: {fileID: 4315991627282094}
   BananaSpread: {fileID: 1746461107200126, guid: 9b1e48075a60b4640a6f3ec4308b5271,
     type: 2}
-  UppperMid: {fileID: 4773714106230278}
 --- !u!114 &114812657319281526
 MonoBehaviour:
   m_ObjectHideFlags: 1
