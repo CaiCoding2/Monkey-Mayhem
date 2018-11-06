@@ -28,6 +28,7 @@
           <e p="ScoreTextScript.cs" t="Include" />
           <e p="SoundLibrary.cs" t="Include" />
           <e p="Spawn.cs" t="Include" />
+          <e p="UserInput.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

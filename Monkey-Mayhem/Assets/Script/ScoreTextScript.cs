@@ -17,7 +17,7 @@ public class ScoreTextScript : MonoBehaviour
     public static int bananaAmount;
     public static float score;
     public static int seconds;
-    public int total = 0;
+    public static int total = 0;
 
     private float realSeconds = 0;
     
