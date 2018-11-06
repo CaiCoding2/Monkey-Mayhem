@@ -144,6 +144,8 @@ public class GameUI : MonoBehaviour
 	
 	public void StartNewGame()
 	{
+		//isPaused = true;
+		isPaused = false;
 		isGameOver = false;
 		ScoreTextScript.bananaAmount = 0;
 		ScoreTextScript.countdownSeconds = 31;
