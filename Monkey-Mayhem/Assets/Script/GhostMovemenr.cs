@@ -10,6 +10,9 @@ public class GhostMovemenr : MonoBehaviour {
 	int direction = 1;
 	private float originalX;
 	
+	public GameObject GhostTrail;
+    public Transform Tail;
+        
 	private void Start()
 	{
 		originalX = transform.position.x;
@@ -19,7 +22,7 @@ public class GhostMovemenr : MonoBehaviour {
 	{
 		if (!GameUI.isPaused)
 		{
-
+			Instantiate(GhostTrail, Tail.position, Quaternion.identity);
 			if (dirRight)
 			{
 				transform.Translate(Vector2.right * horizontalSpeed * Time.deltaTime);

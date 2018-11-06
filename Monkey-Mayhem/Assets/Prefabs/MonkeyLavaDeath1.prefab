@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalSpeed: 1.5
+  BurnMonkey: {fileID: 1424186229187500, guid: 5ea2d571a03746e4cba6a1bd4c7c157d, type: 2}
 --- !u!212 &212839504262914402
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
 	public GameObject ghost;
 	public GameObject smoke;
 	public GameObject deadMonkey;
+	public GameObject burnMonkey;
 	float accelerationTimeAirborne = .2f;
 	float accelerationTimeGrounded = .1f;
 	float moveSpeed = 6;
@@ -324,8 +325,8 @@ public class Player : MonoBehaviour {
 			animator.SetBool("Touched Lava", true);
 			ghost.transform.position = transform.position;
 			ghost.SetActive(true);
-			deadMonkey.transform.position = transform.position;
-			deadMonkey.SetActive(true);
+			burnMonkey.transform.position = transform.position;
+			burnMonkey.SetActive(true);
 			die();
 		}
 	}
@@ -353,7 +354,7 @@ public class Player : MonoBehaviour {
 		if (OnLevelCompletion != null) {
 			OnLevelCompletion();
 		}
-		
+
 		gameObject.SetActive(false);
 	}
 }

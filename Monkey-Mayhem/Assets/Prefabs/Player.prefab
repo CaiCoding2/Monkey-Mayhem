@@ -274,9 +274,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 4.5
   timeToJumpApex: 0.5
-  ghost: {fileID: 0}
-  smoke: {fileID: 0}
-  deadMonkey: {fileID: 0}
+  ghost: {fileID: 1762423142447396, guid: fc937d0527deb416fa8fc81512dd1613, type: 2}
+  smoke: {fileID: 1047755360750644, guid: 9d806c7d177684d219edc0df638a4961, type: 2}
+  deadMonkey: {fileID: 1730944840392152, guid: d5be53aa24d5b456ea1e662df28b0f1c, type: 2}
+  burnMonkey: {fileID: 1037088911656260, guid: af9b3d3060b554bc29ce9407deeb8c9f, type: 2}
   wallJumpClimb: {x: 7.5, y: 16}
   wallJumpOff: {x: 8.5, y: 7}
   wallLeap: {x: 18, y: 17}
@@ -303,7 +304,7 @@ MonoBehaviour:
   TopRight: {fileID: 4315991627282094}
   BananaSpread: {fileID: 1746461107200126, guid: 9b1e48075a60b4640a6f3ec4308b5271,
     type: 2}
-  LowMid: {fileID: 4773714106230278}
+  UppperMid: {fileID: 4773714106230278}
 --- !u!114 &114812657319281526
 MonoBehaviour:
   m_ObjectHideFlags: 1
