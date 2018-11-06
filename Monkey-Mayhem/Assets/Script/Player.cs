@@ -113,7 +113,8 @@ public class Player : MonoBehaviour {
 		animator.SetFloat("Going Up", velocity.y);
 		animator.SetBool("Touching Ground", controller.collisions.below);
 
-	    if (SceneManager.GetActiveScene().name == "Level 1")
+	    if (SceneManager.GetActiveScene().name == "Level 1" ||
+	        SceneManager.GetActiveScene().name == "Endless")
 	    {
 		    if (transform.position.y + 3.72 > ScoreTextScript.score)
 		    {
