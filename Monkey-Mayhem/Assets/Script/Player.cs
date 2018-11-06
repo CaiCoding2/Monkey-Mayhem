@@ -61,7 +61,7 @@ public class Player : MonoBehaviour {
 
     //collection effect
     public GameObject BananaSpread;
-    public Transform UppperMid;
+ 
 	
 	
 	void Start() {
@@ -304,7 +304,7 @@ public class Player : MonoBehaviour {
 		{
 			AudioManager.instance.PlaySound("Banana", transform.position, 1);
 			ScoreTextScript.bananaAmount++;
-            Instantiate(BananaSpread, UppperMid.position, Quaternion.identity);
+            Instantiate(BananaSpread, other.transform.position, Quaternion.identity);
 			Destroy(other.gameObject);
 			
 		}
