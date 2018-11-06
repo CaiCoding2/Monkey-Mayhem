@@ -12,9 +12,11 @@
           <e p="DeadMonkeyMovement.cs" t="Include" />
           <e p="DebrisPhysics.cs" t="Include" />
           <e p="Destroy.cs" t="Include" />
+          <e p="DisplayHighscores.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
           <e p="GameUI.cs" t="Include" />
           <e p="GhostMovemenr.cs" t="Include" />
+          <e p="Highscores.cs" t="Include" />
           <e p="Intro.cs" t="Include" />
           <e p="IntroVideoController.cs" t="Include" />
           <e p="Lava.cs" t="Include" />
