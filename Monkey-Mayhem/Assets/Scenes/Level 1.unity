@@ -3913,7 +3913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Obstacle: {fileID: 1573575158236216, guid: 15260d24077e2294ea78759cf93084a0, type: 2}
-  player: {fileID: 0}
+  player: {fileID: 887252476}
   colliders: []
   size: 0
   SpawnInterval: 2
