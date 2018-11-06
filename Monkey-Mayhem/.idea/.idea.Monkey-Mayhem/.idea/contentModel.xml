@@ -15,6 +15,7 @@
           <e p="Follow.cs" t="Include" />
           <e p="GameUI.cs" t="Include" />
           <e p="GhostMovemenr.cs" t="Include" />
+          <e p="Intro.cs" t="Include" />
           <e p="Lava.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="MusicManager.cs" t="Include" />
