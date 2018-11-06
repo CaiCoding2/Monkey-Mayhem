@@ -32,6 +32,21 @@ public class GameUI : MonoBehaviour
 	public static int stars1C = 0;
 	public static int stars1D = 0;
 	public static int stars1S = 0;
+	public static int stars2A = 0;
+	public static int stars2B = 0;
+	public static int stars2C = 0;
+	public static int stars2D = 0;
+	public static int stars2S = 0;
+	public static int stars3A = 0;
+	public static int stars3B = 0;
+	public static int stars3C = 0;
+	public static int stars3D = 0;
+	public static int stars3S = 0;
+	public static int stars4A = 0;
+	public static int stars4B = 0;
+	public static int stars4C = 0;
+	public static int stars4D = 0;
+	public static int stars4S = 0;
 	
 	void Start ()
 	{
@@ -349,6 +364,62 @@ public class GameUI : MonoBehaviour
 				if (stars1B < 2)
 				{
 					stars1B = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 1 C")
+		{
+			if (ScoreTextScript.countdownSeconds < 15)
+			{
+				if (stars1C < 1)
+				{
+					stars1C = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 22)
+			{
+				stars1C = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars1C < 2)
+				{
+					stars1C = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
+		if (SceneManager.GetActiveScene().name == "Level 1 D")
+		{
+			if (ScoreTextScript.countdownSeconds < 10)
+			{
+				if (stars1D < 1)
+				{
+					stars1D = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 22)
+			{
+				stars1D = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars1D < 2)
+				{
+					stars1D = 2;
 					
 				}
 

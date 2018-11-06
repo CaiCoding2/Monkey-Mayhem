@@ -33,6 +33,11 @@ public class Menu : MonoBehaviour {
 	public GameObject[] stars1C;
 	public GameObject[] stars1D;
 	public GameObject[] stars1S;
+	public GameObject[] stars2A;
+	public GameObject[] stars2B;
+	public GameObject[] stars2C;
+	public GameObject[] stars2D;
+	public GameObject[] stars2S;
 	
 
 	void Start()
@@ -228,10 +233,7 @@ public class Menu : MonoBehaviour {
 		spaceChallangeSelectHolder.SetActive(false);
 		tutorialHolder.SetActive(false);
 		highScoresHolder.SetActive(false);
-		displayStars1();
-		displayStars2();
-		displayStars3();
-		displayStars4();
+		displayStarsClassic();
 	}
 	
 	public void challegeLevelSelect() {
@@ -262,8 +264,7 @@ public class Menu : MonoBehaviour {
 		spaceChallangeSelectHolder.SetActive(false);
 		tutorialHolder.SetActive(false);
 		highScoresHolder.SetActive(false);
-		displayStars1A();
-		displayStars1B();
+		displayStars1Challenges();
 	}
 	
 	public void volcanoSelect() {
@@ -279,6 +280,7 @@ public class Menu : MonoBehaviour {
 		spaceChallangeSelectHolder.SetActive(false);
 		tutorialHolder.SetActive(false);
 		highScoresHolder.SetActive(false);
+		displayStars2Challenges();
 	}
 	
 	public void skySelect() {
@@ -378,83 +380,87 @@ public class Menu : MonoBehaviour {
 		GameUI.isPaused = false;
 	}
 
-	public void displayStars1()
+	public void displayStarsClassic()
 	{
 		for (int x = 0 ; x < GameUI.stars1; x++)
 		{
 			stars1[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars2()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars2; x++)
 		{
 			stars2[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars3()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars3; x++)
 		{
 			stars3[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars4()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars4; x++)
 		{
 			stars4[x].SetActive(true);
 		}
-	}
-	
-	public void displayStarsS()
-	{
+		
 		for (int x = 0 ; x < GameUI.starsS; x++)
 		{
 			starsS[x].SetActive(true);
 		}
 	}
 	
-	public void displayStars1A()
+	public void displayStars1Challenges()
 	{
 		for (int x = 0 ; x < GameUI.stars1A; x++)
 		{
 			stars1A[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars1B()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars1B; x++)
 		{
 			stars1B[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars1C()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars1C; x++)
 		{
 			stars1C[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars1D()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars1D; x++)
 		{
 			stars1D[x].SetActive(true);
 		}
-	}
-	
-	public void displayStars1S()
-	{
+		
 		for (int x = 0 ; x < GameUI.stars1S; x++)
 		{
 			stars1S[x].SetActive(true);
+		}
+	}
+	
+	public void displayStars2Challenges()
+	{
+		for (int x = 0 ; x < GameUI.stars2A; x++)
+		{
+			stars2A[x].SetActive(true);
+		}
+		
+		for (int x = 0 ; x < GameUI.stars2B; x++)
+		{
+			stars2B[x].SetActive(true);
+		}
+		
+		for (int x = 0 ; x < GameUI.stars2C; x++)
+		{
+			stars2C[x].SetActive(true);
+		}
+		
+		for (int x = 0 ; x < GameUI.stars2D; x++)
+		{
+			stars2D[x].SetActive(true);
+		}
+		
+		for (int x = 0 ; x < GameUI.stars2S; x++)
+		{
+			stars2S[x].SetActive(true);
 		}
 	}
 }
