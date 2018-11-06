@@ -427,6 +427,34 @@ public class GameUI : MonoBehaviour
 			}
 		}
 		
+		if (SceneManager.GetActiveScene().name == "Level 2 A")
+		{
+			if (ScoreTextScript.countdownSeconds < 7)
+			{
+				if (stars2A < 1)
+				{
+					stars2A = 1;
+					
+				}
+				return 1;
+			}
+			else if (ScoreTextScript.countdownSeconds > 15)
+			{
+				stars2A = 3;
+				return 3;
+			}
+			else
+			{
+				if (stars2A < 2)
+				{
+					stars2A = 2;
+					
+				}
+
+				return 2;
+			}
+		}
+		
 		return 0;
 	}
 }
