@@ -192,7 +192,7 @@ public class Player : MonoBehaviour {
 		    Destroy(smoke,.5f);
 	    }
 
-	    if (ScoreTextScript.score > 15)
+	    if (ScoreTextScript.score > 15 && SceneManager.GetActiveScene().name != "Endless")
 	    {
 		    completeLevel();
 	    }

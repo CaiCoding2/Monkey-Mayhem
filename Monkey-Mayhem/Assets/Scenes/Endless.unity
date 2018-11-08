@@ -564,7 +564,7 @@ MonoBehaviour:
   buttonToSelectOnChallengeComplete: {fileID: 0}
   buttonToSelectOnLevelComplete: {fileID: 0}
   stars: []
-  userInput: {fileID: 0}
+  userInput: {fileID: 1781925711}
 --- !u!1 &261636380
 GameObject:
   m_ObjectHideFlags: 0
