@@ -183,6 +183,7 @@ public class Player : MonoBehaviour {
 
 	    if (controller.collisions.above && controller.collisions.below)
 	    {
+            //player collide from top and bottom
 		    ghost.transform.position = transform.position;
 		    ghost.SetActive(true);
 		    smoke.transform.position = transform.position;

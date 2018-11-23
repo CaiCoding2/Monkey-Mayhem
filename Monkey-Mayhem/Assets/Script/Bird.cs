@@ -63,7 +63,7 @@ public class Bird : MonoBehaviour {
                     break;
 	        }
 
-	        transform.localPosition = new Vector2(currPosition.x, currPosition.y);
+	        transform.position = new Vector2(currPosition.x, currPosition.y);
 	    }
 	}
 }

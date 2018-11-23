@@ -106,18 +106,36 @@ public class Controller2D : RaycastController {
 
 		for (int i = 0; i < verticalRayCount; i ++) {
 
-			Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
+            Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
-
-			
-
+            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+           
             Vector2 rayOrigins = (directionY == 1) ? raycastOrigins.topLeft : raycastOrigins.topLeft;
             rayOrigins += Vector2.right * (verticalRaySpacing * i + velocity.x);
             RaycastHit2D hit2 = Physics2D.Raycast(rayOrigins, Vector2.down * directionY, rayLength, collisionMask);
-           
-            
+            Debug.DrawRay(rayOrigin, Vector2.down * directionY * rayLength, Color.green);
 
+            Vector2 rayBottom = raycastOrigins.bottomLeft + Vector2.right * (verticalRaySpacing * i + velocity.x);
+            RaycastHit2D hitbottom = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
+            Debug.DrawRay(rayBottom, Vector2.up * directionY * rayLength, Color.blue);
+
+
+            /*Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
+			rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
+			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
+            Debug.DrawRay(rayOrigin, Vector2.up * directionY * rayLength, Color.red);
+            
+           
+            Vector2 rayOrigins = (directionY == 1) ? raycastOrigins.topLeft : raycastOrigins.topLeft;
+            rayOrigins += Vector2.right * (verticalRaySpacing * i + velocity.x);
+            RaycastHit2D hit2 = Physics2D.Raycast(rayOrigins, Vector2.down * directionY, rayLength, collisionMask);
+            Debug.DrawRay(rayOrigin, Vector2.down * directionY * rayLength, Color.green);*/
+
+            //jumping make directionY postive
+             
+
+            //if collision.below == 1 that mean true else is false
             if (hit) {
 			 
 				velocity.y = (hit.distance - skinWidth) * directionY;
@@ -129,16 +147,19 @@ public class Controller2D : RaycastController {
 
 				collisions.below = directionY == -1;
                 //collisions.above = directionY == -1;
-
+                 
                 if (hit2)
                 {
+                    if (hitbottom)
+                    {
+                        collisions.below = true;
+                    }
                     collisions.above = directionY == -1;
                 }
-                else
+                /*else
                 {
-                    
                     collisions.above = directionY == 1;
-                }
+                }*/
 
             }
 

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212068102982498022}
   - component: {fileID: 95641742606954804}
   - component: {fileID: 114557858422551398}
+  - component: {fileID: 114194548163847636}
   - component: {fileID: 50045894425473596}
   - component: {fileID: 61837674134272096}
   m_Layer: 9
@@ -96,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030724699730588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46, y: 0.94, z: -0.063995466}
+  m_LocalPosition: {x: 1.62, y: 0.35, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 4005848790544022}
@@ -194,13 +195,39 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114557858422551398
+--- !u!114 &114194548163847636
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030724699730588}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 583e3b662fc77bb4e92562ffd24f8e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 256
+  horizontalRayCount: 40
+  verticalRayCount: 40
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  collider: {fileID: 0}
+  animator: {fileID: 95641742606954804}
+  falling: {x: 0, y: -5.1, z: 0}
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  Dust: {fileID: 1303219838139294, guid: c2a1076ecb71b0f44a821c1985178505, type: 2}
+  ButtomCenter: {fileID: 4111008237964284}
+--- !u!114 &114557858422551398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030724699730588}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66e9df5f7c056954fba79f89bdd92880, type: 3}
   m_Name: 

@@ -468,7 +468,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 234014605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1427,11 +1427,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4611298831298894, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.537
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 4611298831298894, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.72
+      value: -3.73
       objectReference: {fileID: 0}
     - target: {fileID: 4611298831298894, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1477,6 +1477,26 @@ Prefab:
       propertyPath: burnMonkey
       value: 
       objectReference: {fileID: 367549005}
+    - target: {fileID: 1821916167047906, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623356090574848, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625435805875368, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898813556233388, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131088067608986, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ec6f71aee6c8642966443285c1e2ed, type: 2}
   m_IsPrefabAsset: 0
@@ -2406,7 +2426,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -3150,7 +3170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1067369825}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -3182,7 +3202,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 15
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
@@ -5124,7 +5144,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 2
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -5225,6 +5245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameSubmitHolder: {fileID: 686814131}
+  Button: {fileID: 1879053523}
 --- !u!4 &1781925712
 Transform:
   m_ObjectHideFlags: 0
@@ -5643,6 +5664,7 @@ GameObject:
   - component: {fileID: 1921606331}
   - component: {fileID: 1921606330}
   - component: {fileID: 1921606329}
+  - component: {fileID: 1921606332}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -5695,6 +5717,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921606332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921606328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443b1f50e58968a4185efafbbd74bafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1940333179
 GameObject:
   m_ObjectHideFlags: 0

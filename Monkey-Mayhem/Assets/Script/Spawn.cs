@@ -29,7 +29,7 @@ public class Spawn : MonoBehaviour {
     void Update()
     {
         
-        if (Time.time > nextSpawn)
+        if (Time.time > nextSpawn && !GameUI.isGameOver)
         {
             nextSpawn = Time.time + SpawnInterval; 
             spawnLocation = new Vector2(Random.Range(-CamSize.x + 2f, CamSize.x - 2f), player.transform.position.y+4f* CamSize.y);

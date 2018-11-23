@@ -52,8 +52,6 @@ public class GameUI : MonoBehaviour
 	
 	void Start ()
 	{
-
-		
 		FindObjectOfType<Player>().OnDeath += onGameOver;
 		FindObjectOfType<Player>().OnChallengeCompletion += onChallengeCompleted;
 		FindObjectOfType<Player>().OnLevelCompletion += onLevelCompleted;
@@ -154,7 +152,11 @@ public class GameUI : MonoBehaviour
 		ScoreTextScript.score = 0;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		Time.timeScale = 1;
-        userInput.nameSubmitHolder.SetActive(true);
+        if(SceneManager.GetActiveScene().name == "Endless")
+        {
+            userInput.nameSubmitHolder.SetActive(true);
+        }
+        
 	}
 
 	public void toMenu()
