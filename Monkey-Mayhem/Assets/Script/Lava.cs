@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Lava : MonoBehaviour
 {
-
-	private bool dirRight = true;
+    public GameObject player;
+    private bool dirRight = true;
 	public float verticalSpeed;
 	public float horizontalSpeed;
 	int direction = 1;
@@ -17,7 +17,6 @@ public class Lava : MonoBehaviour
 	{
 		if (!GameUI.isPaused)
 		{
-
 			if (dirRight)
 			{
 				transform.Translate(Vector2.right * horizontalSpeed * Time.deltaTime);
@@ -41,6 +40,19 @@ public class Lava : MonoBehaviour
 			{
 				verticalSpeed = 0;
 			}
-		}
+
+            Debug.Log(Mathf.Abs(player.transform.position.y) - Mathf.Abs(transform.position.y));
+            float deltaPos = Mathf.Abs(player.transform.position.y) - Mathf.Abs(transform.position.y);
+            if (deltaPos > 25f)
+            {
+                verticalSpeed = 3f;
+                Debug.Log("INCREASE");
+            }
+            else if (deltaPos <= 25)
+            {
+                verticalSpeed = 0.7f;
+                Debug.Log("DECREASE");
+            }
+        }
 	}
 }
