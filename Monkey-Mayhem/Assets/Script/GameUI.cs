@@ -63,7 +63,7 @@ public class GameUI : MonoBehaviour
 	void Update () {
 		
 		if (!gameOverUI.active){
-			if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button9))
+            if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button9) || Input.GetKeyDown(KeyCode.Joystick1Button8))
 			{
 				if(Time.timeScale == 1)
 				{

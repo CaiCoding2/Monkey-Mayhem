@@ -1990,6 +1990,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212969745107723794, guid: 233c9ee84ebefdd4eba17d903dd09f83,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1805554423
+      objectReference: {fileID: 0}
+    - target: {fileID: 212969745107723794, guid: 233c9ee84ebefdd4eba17d903dd09f83,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212969745107723794, guid: 233c9ee84ebefdd4eba17d903dd09f83,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233c9ee84ebefdd4eba17d903dd09f83, type: 2}
   m_IsPrefabAsset: 0
@@ -7003,6 +7018,21 @@ Prefab:
     - target: {fileID: 1359299654882792, guid: 233c9ee84ebefdd4eba17d903dd09f83, type: 2}
       propertyPath: m_Name
       value: tucan1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212969745107723794, guid: 233c9ee84ebefdd4eba17d903dd09f83,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1805554423
+      objectReference: {fileID: 0}
+    - target: {fileID: 212969745107723794, guid: 233c9ee84ebefdd4eba17d903dd09f83,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 212969745107723794, guid: 233c9ee84ebefdd4eba17d903dd09f83,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233c9ee84ebefdd4eba17d903dd09f83, type: 2}
