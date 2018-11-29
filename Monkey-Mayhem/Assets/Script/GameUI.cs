@@ -49,8 +49,10 @@ public class GameUI : MonoBehaviour
 	public static int stars4S = 0;
 
     public UserInput userInput;
-	
-	void Start ()
+
+    Color newColor = new Color(0.0f, 0.0f, 0.0f, 0.7f);
+
+    void Start ()
 	{
 		FindObjectOfType<Player>().OnDeath += onGameOver;
 		FindObjectOfType<Player>().OnChallengeCompletion += onChallengeCompleted;
@@ -103,7 +105,7 @@ public class GameUI : MonoBehaviour
 	{
 		AudioManager.instance.PlaySound("Victory", new Vector2 (0,0), 1);
 		buttonToSelectOnChallengeComplete.Select();
-		StartCoroutine(Fade (Color.clear, Color.white,1));
+        StartCoroutine(Fade (Color.clear, newColor,1));
 		challengeComppleteUI.SetActive (true);
 		isGameOver = true;
 		for (int x = 0; x < (3 - getStars()) ; x++)
@@ -118,7 +120,7 @@ public class GameUI : MonoBehaviour
 		yield return new WaitForSeconds(2);
 		gameOverUI.SetActive(true);
 		buttonToSelectOnGameOver.Select();
-		StartCoroutine(Fade (Color.clear, Color.white,1));
+		StartCoroutine(Fade (Color.clear, newColor,1));
 		gameOverText.SetActive(false);
 	}
 	
@@ -154,10 +156,11 @@ public class GameUI : MonoBehaviour
 		Time.timeScale = 1;
         if(SceneManager.GetActiveScene().name == "Endless")
         {
-            userInput.nameSubmitHolder.SetActive(true);
+            userInput.SubmitName.SetActive(true);
+            userInput.SubmitButton.SetActive(true);
         }
-        
-	}
+
+    }
 
 	public void toMenu()
 	{

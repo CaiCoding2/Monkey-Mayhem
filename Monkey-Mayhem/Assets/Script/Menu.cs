@@ -43,8 +43,8 @@ public class Menu : MonoBehaviour {
 	void Start()
 	{
         //hide mouse 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 
         SetMusicVolume(.3f); // music was too loud compared to everything else so I turned it down
 		volumeSliders [0].value = AudioManager.instance.masterVolumePercent;
